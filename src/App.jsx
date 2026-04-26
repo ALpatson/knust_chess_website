@@ -1,0 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Executives from './pages/Executives';
+import Legends from './pages/Legends';
+import Events from './pages/Events';
+import About from './pages/About';
+
+function App() {
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen bg-chess-black text-chess-white">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/executives" element={<Executives />} />
+            <Route path="/legends" element={<Legends />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
