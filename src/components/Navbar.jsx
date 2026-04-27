@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center gap-3">
-              <img src="/asset/Club_logo_1.png" alt="KNUST Chess Club Logo" className="h-10 w-10 object-contain" onError={(e) => { e.target.style.display = 'none' }} />
+              <img src="/asset/Club_logo_1.png" alt="KNUST Chess Club Logo" className="h-10 w-10 object-contain bg-white rounded-full p-1" onError={(e) => { e.target.style.display = 'none' }} />
               <span className="font-bold text-xl tracking-tight uppercase text-chess-white">KNUST Chess Club</span>
             </Link>
           </div>

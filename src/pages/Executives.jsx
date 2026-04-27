@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const executives = [
-  { id: 1, name: 'Michael Osei', role: 'President', piece: '♔ King', quote: '"Strategy is everything."', img: null },
-  { id: 2, name: 'Sarah Mensah', role: 'Vice President', piece: '♕ Queen', quote: '"Control the center."', img: null },
-  { id: 3, name: 'David Appiah', role: 'Secretary', piece: '♗ Bishop', quote: '"Precision and timing."', img: null },
-  { id: 4, name: 'Grace Ofori', role: 'Financial Sec.', piece: '♖ Rook', quote: '"Solid defense wins games."', img: null },
+  { id: 1, name: 'Alexis Baffour Owusu Annor', role: 'President', piece: '♔ King', quote: '"Strategy is everything."', img: null },
+  { id: 2, name: 'Alpatson Cobbina Siaw', role: 'Vice President', piece: '♕ Queen', quote: '"Control the center."', img: '/executives/Vice_president .jpeg' },
+  { id: 3, name: 'Precious Paulina Adjei', role: 'Secretary', piece: '♗ Bishop', quote: '"Precision and timing."', img: null },
+  { id: 4, name: 'Jubilee Roxsanne Bleboo', role: 'Financial Sec.', piece: '♖ Rook', quote: '"Solid defense wins games."', img: null },
   { id: 5, name: 'Kwabena Yeboah', role: 'Organizer', piece: '♘ Knight', quote: '"Unpredictable moves."', img: null },
 ];
 
@@ -38,7 +38,7 @@ const Executives = () => {
               <div className="relative z-10 p-8 flex flex-col items-center text-center h-full">
                 <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-white/20 mb-6 bg-gray-800 relative group-hover:border-white transition-colors duration-300">
                   {exec.img ? (
-                    <img src={exec.img} alt={exec.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    <img src={exec.img} alt={exec.name} className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-4xl text-white/50">
                       {exec.piece.split(' ')[0]}
