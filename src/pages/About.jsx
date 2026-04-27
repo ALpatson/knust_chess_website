@@ -34,7 +34,8 @@ const About = () => {
           </p>
           <p>
             Our club is renowned for producing some of the strongest players for the nation. We have consistently trained 
-            and nurtured top-tier talent, including national stars like <strong>Maud Benson</strong>, who continue to dominate the national chess scene.
+            and nurtured top-tier talent, including national stars like <strong>Kwabena Adu-Poku, Bernard Anhwere, Maud Benson</strong>, who continue to dominate the national chess scene. 
+            Most recently, we solidified our legacy by emerging as the <strong>Overall Champions at the 2nd Minor GUSA Games (2025)</strong>.
           </p>
           <div className="pt-6 border-t border-white/10 mt-6">
             <h3 className="text-white font-bold uppercase mb-2">Our Mission</h3>
@@ -45,12 +46,12 @@ const About = () => {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 gap-4"
+          className="grid grid-cols-2 md:grid-cols-3 gap-4"
         >
           <div className="bg-white/5 border border-white/10 aspect-square flex items-center justify-center p-6 text-center hover:bg-white/10 transition-colors">
              <div>
-               <div className="text-4xl font-bold text-white mb-2">100+</div>
-               <div className="text-xs uppercase tracking-wider text-chess-accent">Active Players</div>
+               <div className="text-4xl font-bold text-white mb-2">1st</div>
+               <div className="text-xs uppercase tracking-wider text-chess-accent">GUSA Minor Games ('25)</div>
              </div>
           </div>
           <div className="bg-white/5 border border-white/10 aspect-square flex items-center justify-center p-6 text-center hover:bg-white/10 transition-colors">
@@ -59,21 +60,31 @@ const About = () => {
                <div className="text-xs uppercase tracking-wider text-chess-accent">Tertiary Champions ('22)</div>
              </div>
           </div>
-          <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 text-center col-span-2 hover:bg-white/10 transition-colors">
+          <div className="bg-white/5 border border-white/10 aspect-square flex items-center justify-center p-6 text-center hover:bg-white/10 transition-colors col-span-2 md:col-span-1">
+             <div>
+               <div className="text-4xl font-bold text-white mb-2">100+</div>
+               <div className="text-xs uppercase tracking-wider text-chess-accent">Active Players</div>
+             </div>
+          </div>
+          <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 text-center col-span-2 md:col-span-3 hover:bg-white/10 transition-colors">
              <div className="w-full">
                <div className="text-sm uppercase tracking-wider text-white mb-4 border-b border-white/10 pb-2">Tertiary Chess Championship Record</div>
                <div className="flex justify-around text-chess-accent mt-4">
                  <div className="text-center group">
                    <div className="font-bold text-white text-2xl mb-1 group-hover:scale-110 transition-transform">1st</div>
-                   <div className="text-xs uppercase tracking-widest text-white/50">2022</div>
+                   <div className="text-xs uppercase tracking-widest text-white/50">2025</div>
+                 </div>
+                 <div className="text-center group">
+                   <div className="font-bold text-white text-2xl mb-1 group-hover:scale-110 transition-transform">2nd</div>
+                   <div className="text-xs uppercase tracking-widest text-white/50">2024</div>
                  </div>
                  <div className="text-center group">
                    <div className="font-bold text-white text-2xl mb-1 group-hover:scale-110 transition-transform">3rd</div>
                    <div className="text-xs uppercase tracking-widest text-white/50">2023</div>
                  </div>
                  <div className="text-center group">
-                   <div className="font-bold text-white text-2xl mb-1 group-hover:scale-110 transition-transform">2nd</div>
-                   <div className="text-xs uppercase tracking-widest text-white/50">2024</div>
+                   <div className="font-bold text-white text-2xl mb-1 group-hover:scale-110 transition-transform">1st</div>
+                   <div className="text-xs uppercase tracking-widest text-white/50">2022</div>
                  </div>
                </div>
              </div>
