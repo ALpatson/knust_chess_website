@@ -9,10 +9,10 @@ const Footer = () => {
         <p className="text-sm text-chess-accent/60">
           © {new Date().getFullYear()} KNUST Chess Club. All rights reserved.
         </p>
-        <div className="flex space-x-6 text-sm text-chess-accent">
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
+        <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm text-chess-accent">
+          <a href="https://x.com/knustchess?s=11" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X (Twitter)</a>
           <a href="https://www.instagram.com/knustchess?igsh=OWR2cTJpN2RxMHp1&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-          <a href="#" className="hover:text-white transition-colors">Lichess</a>
+          <a href="mailto:knustchess@gmail.com" className="hover:text-white transition-colors font-medium border-l border-white/10 pl-6">knustchess@gmail.com</a>
         </div>
       </div>
     </footer>

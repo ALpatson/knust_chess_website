@@ -5,13 +5,15 @@ const eventGalleries = {
   clubMoments: [
     { type: 'image', src: '/events/club_moments/fun.jpeg', alt: 'Fun Games 1', year: '2025' },
     { type: 'image', src: '/events/club_moments/fun1.jpeg', alt: 'Fun Games 2', year: '2025' },
-    { type: 'image', src: '/events/club_moments/fun2.jpeg', alt: 'Fun Games 3', year: '2025' },
+    { type: 'image', src: '/events/club_moments/fun2.jpeg', alt: 'Fun Games 3', year: '2026' },
     { type: 'image', src: '/events/club_moments/fun3.jpeg', alt: 'Club Highlights 1', year: '2025' },
     { type: 'image', src: '/events/club_moments/fun4.jpeg', alt: 'Club Highlights 2', year: '2025' },
     { type: 'image', src: '/events/club_moments/fun5.jpeg', alt: 'Tactical Discussions', year: '2025' },
     { type: 'image', src: '/events/club_moments/fun6.jpeg', alt: 'Casual Matches', year: '2025' },
-    { type: 'image', src: '/events/club_moments/fun7.jpeg', alt: 'Post-game Analysis', year: '2025' },
-    { type: 'image', src: '/events/club_moments/fun8.jpeg', alt: 'Club Gathering', year: '2025' },
+    {type: 'image', src: '/events/club_moments/fun7.jpeg', alt: 'Post-game Analysis', year: '2026'},
+    {type: 'image', src: '/events/club_moments/fun8.jpeg', alt: 'Club Gathering', year: '2026'},
+    {type: 'image', src: '/events/club_moments/fun9.jpeg', alt: 'Strategic Planning', year: '2022'},
+    {type: 'image', src: '/events/club_moments/fun11.jpeg', alt: 'Friendly Match', year: '2025'},
   ],
   freshers: [
     { type: 'image', src: '/events/freshers/fresher_champ.jpeg', alt: 'Freshers Champion', year: '2026' },

@@ -252,27 +252,27 @@ const Home = () => {
 
           {/* Runner Up */}
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-gray-400">
-            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">KCC Runner-up (2025)</h2>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Challenger's Runner-up (2026)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-gray-400 transition-colors duration-300">
                <img src="/legends/KCC_Champ2nd.jpeg" alt="KCC Runner-up" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-bold uppercase tracking-wide">Akwasi Poku</h3>
-              <p className="text-xs text-chess-accent leading-relaxed">Second place in the 2025 KCC Championship.</p>
+              <p className="text-xs text-chess-accent leading-relaxed">Second place in the maiden KCC Challenger's Tournament.</p>
             </div>
           </div>
 
-          {/* 3rd Place / VP */}
+          {/* 3rd Place / President */}
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-gray-600">
-            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">3rd Place Winner (2025)</h2>
+            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Challenger's 3rd Place (2026)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-gray-600 transition-colors duration-300">
-               <img src="/legends/Vice_president.jpeg" alt="3rd Place Winner" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
+               <img src="/executives/president.jpeg" alt="3rd Place Winner" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
             </div>
             <div className="space-y-2">
-              <h3 className="text-lg font-bold uppercase tracking-wide">Alpatson Cobbina Siaw</h3>
-              <p className="text-xs text-chess-accent leading-relaxed">Our Vice President and 3rd place champion.</p>
+              <h3 className="text-lg font-bold uppercase tracking-wide">Alexis Baffour Owusu Annor</h3>
+              <p className="text-xs text-chess-accent leading-relaxed">Third place in the maiden KCC Challenger's Tournament.</p>
             </div>
           </div>
 
