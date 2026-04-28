@@ -2,6 +2,19 @@ import { motion } from 'framer-motion';
 
 const legendsData = [
   {
+    id: 6,
+    name: 'Johnny Edem Agboado',
+    title: 'The Arbiter & Mathematician',
+    description: 'A dedicated coach and certified arbiter who revolutionized the club\'s competitive landscape by developing the official KCC Player Rating System.',
+    achievements: [
+      "Architect of the Official KCC Rating Formula",
+      "2nd Place, KNUST Freestyle Tournament (2025)",
+      "Lead Coach and Tutor to Club Members",
+      "Official Arbiter for Major Club Events"
+    ],
+    image: '/legends/Johnny_Edem_Agboado.jpeg'
+  },
+  {
     id: 1,
     name: 'Alpatson Cobbina Siaw',
     title: 'The Unstoppable Force',
@@ -65,18 +78,6 @@ const legendsData = [
       "2nd Place, KCC Challengers Championship (2026)"
     ],
     image: '/legends/KCC_Champ2nd.jpeg'
-  },
-  {
-    id: 6,
-    name: 'Johnny Edem Agboado',
-    title: 'The Arbiter & Tutor',
-    description: 'A dedicated coach and certified arbiter who has nurtured countless talents within the club while maintaining a high competitive standard.',
-    achievements: [
-      "2nd Place, KNUST Freestyle Tournament (2025)",
-      "Lead Coach and Tutor to Club Members",
-      "Official Arbiter for Major Club Events"
-    ],
-    image: '/legends/Johnny_Edem_Agboado.jpeg'
   },
   {
     id: 7,
@@ -222,6 +223,28 @@ const Legends = () => {
                   ))}
                 </ul>
               </div>
+
+              {legend.formula && (
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <div className="flex justify-between items-end mb-3">
+                    <h4 className="text-[10px] uppercase tracking-widest text-white/40">The Agboado Formula</h4>
+                    <span className="text-[8px] text-chess-accent/60 font-mono italic">K-Factor: 32</span>
+                  </div>
+                  <div className="bg-black/40 p-5 rounded-lg border border-chess-accent/20 font-mono text-center group/formula hover:border-chess-accent/40 transition-colors">
+                    <p className="text-chess-accent text-xl font-bold tracking-widest mb-2 group-hover/formula:scale-105 transition-transform">
+                      {legend.formula.equation}
+                    </p>
+                    {legend.formula.subEquation && (
+                      <p className="text-white/40 text-[11px] mb-3 border-t border-white/5 pt-2">
+                        {legend.formula.subEquation}
+                      </p>
+                    )}
+                    <p className="text-[9px] text-white/60 italic leading-tight">
+                      {legend.formula.explanation}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
         ))}
