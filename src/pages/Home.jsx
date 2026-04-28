@@ -207,7 +207,7 @@ const Home = () => {
         <div className="mb-16">
           <div className="glass-panel p-8 md:p-12 border-t-4 border-t-chess-accent flex flex-col md:flex-row items-center text-center md:text-left gap-10 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden">
             {/* Background Decorative Text */}
-            <div className="absolute -right-4 -bottom-10 text-[12rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter">
+            <div className="absolute right-0 bottom-0 text-[5rem] md:text-[12rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
               Maiden
             </div>
             
