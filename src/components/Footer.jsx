@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Pipe separator */}
           <span className="text-white/20 select-none">|</span>
           {/* Mail icon */}
-          <a href="mailto:knustchess@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" title="Email">
+          <a href="mailto:chessclubknust@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" title="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>

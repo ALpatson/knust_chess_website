@@ -17,35 +17,35 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           {/* Abstract chess board pattern background */}
           <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#000_25%,transparent_25%,transparent_75%,#000_75%,#000),linear-gradient(45deg,#000_25%,transparent_25%,transparent_75%,#000_75%,#000)] bg-[length:60px_60px] bg-[position:0_0,30px_30px]" />
-          
+
           {/* Floating Chess Pieces Background */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
-                initial={{ 
-                  left: Math.random() * 100 + "%", 
+                initial={{
+                  left: Math.random() * 100 + "%",
                   top: Math.random() * 100 + "%",
                   opacity: 0,
                   rotate: Math.random() * 360,
                   scale: 0.8 + Math.random() * 0.4
                 }}
-                animate={{ 
+                animate={{
                   left: [
-                    Math.random() * 100 + "%", 
-                    Math.random() * 100 + "%", 
+                    Math.random() * 100 + "%",
+                    Math.random() * 100 + "%",
                     Math.random() * 100 + "%"
                   ],
                   top: [
-                    Math.random() * 100 + "%", 
-                    Math.random() * 100 + "%", 
+                    Math.random() * 100 + "%",
+                    Math.random() * 100 + "%",
                     Math.random() * 100 + "%"
                   ],
                   opacity: [0.1, 0.25, 0.1],
                   rotate: [0, 180, 360]
                 }}
-                transition={{ 
-                  duration: 40 + Math.random() * 60, 
+                transition={{
+                  duration: 40 + Math.random() * 60,
                   repeat: Infinity,
                   ease: "linear"
                 }}
@@ -58,17 +58,17 @@ const Home = () => {
 
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-chess-black" />
         </div>
-        
+
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
           >
-            MASTER THE <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-600">64 SQUARES</span>
+            MASTER THE <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-600">64 SQUARES</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -92,12 +92,12 @@ const Home = () => {
       <section className="py-24 relative border-b border-white/5 bg-gray-900/30">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            
+
             {/* Left side text */}
             <div className="lg:w-1/2 space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-widest text-white">
-                  Join The <br/><span className="text-chess-accent">Action</span>
+                  Join The <br /><span className="text-chess-accent">Action</span>
                 </h2>
                 <p className="text-lg text-gray-400 max-w-lg leading-relaxed mt-6">
                   Ready to test your skills? Join us at our regular club meetings where we offer training lessons, host mini-tournaments, and play friendly games. All skill levels are welcome!
@@ -138,7 +138,7 @@ const Home = () => {
       <section className="py-24 relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-chess-accent/5 rounded-full blur-[100px] pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col mb-12">
             <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Upcoming Major Event</h2>
@@ -146,7 +146,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-            
+
             {/* Typography & Details */}
             <div className="lg:w-1/2 space-y-8 order-2 lg:order-1">
               <h3 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-none text-white">
@@ -154,7 +154,7 @@ const Home = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-chess-accent to-white">Tournament</span>
                 <span className="block text-2xl tracking-widest text-white/50 mt-2">2026</span>
               </h3>
-              
+
               <div className="pl-6 border-l-2 border-chess-accent/30 space-y-4">
                 <p className="text-xl text-gray-300 font-light leading-relaxed">
                   An exclusive, highly competitive tournament strictly for females. Step up to the board, showcase your strategic brilliance, and compete for amazing prizes!
@@ -167,9 +167,9 @@ const Home = () => {
               </div>
 
               <div className="pt-4">
-                <a 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfKtDGjfpwXVCWSYiwb34A3BdSHCVGqyQU-_zB2_vwZAwNjMg/viewform?usp=dialog" 
-                  target="_blank" 
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfKtDGjfpwXVCWSYiwb34A3BdSHCVGqyQU-_zB2_vwZAwNjMg/viewform?usp=dialog"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-chess-accent overflow-hidden"
                 >
@@ -181,14 +181,10 @@ const Home = () => {
 
             {/* Flyer/Visual Element - Floating without a heavy card */}
             <div className="lg:w-1/2 order-1 lg:order-2 w-full max-w-md mx-auto">
-              <div className="relative aspect-[3/4] group">
+              <div className="relative group">
                 <div className="absolute -inset-4 border border-white/10 translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                <div className="absolute inset-0 bg-gray-900 border border-white/5 overflow-hidden flex items-center justify-center">
-                  <img src="/asset/Club_logo_1.png" alt="Queens Tournament 2026 Flyer" className="w-1/2 opacity-20 grayscale" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
-                     <span className="text-6xl mb-4 text-chess-accent">♕</span>
-                     <span className="text-xs uppercase tracking-widest text-center px-4">Flyer Coming Soon</span>
-                  </div>
+                <div className="bg-gray-900 border border-white/5 overflow-hidden">
+                  <img src="/events/Queens.jpeg" alt="Queens Tournament 2026 Flyer" className="w-full h-auto" />
                 </div>
               </div>
             </div>
@@ -202,7 +198,7 @@ const Home = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest border-b border-white/10 inline-block pb-4">Our Champions</h2>
         </div>
-        
+
         {/* Featured Challenger (Maiden Edition) */}
         <div className="mb-16">
           <div className="glass-panel p-8 md:p-12 border-t-4 border-t-chess-accent flex flex-col md:flex-row items-center text-center md:text-left gap-10 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden">
@@ -210,15 +206,15 @@ const Home = () => {
             <div className="absolute right-0 bottom-0 text-[5rem] md:text-[12rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
               Maiden
             </div>
-            
+
             <div className="w-64 h-64 bg-gray-800 rounded-full border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
-               <img src="/legends/Luqman_Abubakar.jpeg" alt="Challenger's Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 absolute z-10" />
-               <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
-                 <span className="text-7xl mb-2">⚔️</span>
-               </div>
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none" />
+              <img src="/legends/Luqman_Abubakar.jpeg" alt="Challenger's Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 absolute z-10" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
+                <span className="text-7xl mb-2">⚔️</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none" />
             </div>
-            
+
             <div className="space-y-6 relative z-10">
               <div>
                 <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-chess-accent mb-2">KCC Challenger's Champion (2026)</h2>
@@ -241,8 +237,8 @@ const Home = () => {
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-white">
             <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Overall KNUST Champion (2025)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-white transition-colors duration-300">
-               <img src="/legends/KCC_Champ.jpeg" alt="Overall Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
+              <img src="/legends/KCC_Champ.jpeg" alt="Overall Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-bold uppercase tracking-wide">Amoani Charles Antwi</h3>
@@ -254,8 +250,8 @@ const Home = () => {
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-gray-400">
             <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Challenger's Runner-up (2026)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-gray-400 transition-colors duration-300">
-               <img src="/legends/KCC_Champ2nd.jpeg" alt="KCC Runner-up" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
+              <img src="/legends/KCC_Champ2nd.jpeg" alt="KCC Runner-up" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-bold uppercase tracking-wide">Akwasi Poku</h3>
@@ -267,8 +263,8 @@ const Home = () => {
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-gray-600">
             <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Challenger's 3rd Place (2026)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-gray-600 transition-colors duration-300">
-               <img src="/executives/president.jpeg" alt="3rd Place Winner" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
+              <img src="/executives/president.jpeg" alt="3rd Place Winner" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-bold uppercase tracking-wide">Alexis Baffour Owusu Annor</h3>
@@ -280,8 +276,8 @@ const Home = () => {
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-chess-accent">
             <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Fresher's Champion (2026)</h2>
             <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-chess-accent transition-colors duration-300">
-               <img src="/events/freshers/fresher_champ.jpeg" alt="Fresher's Champion 2026" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" onError={(e) => e.target.style.display = 'none'} />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none opacity-50" />
+              <img src="/events/freshers/fresher_champ.jpeg" alt="Fresher's Champion 2026" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" onError={(e) => e.target.style.display = 'none'} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none opacity-50" />
             </div>
             <div className="space-y-2">
               <h3 className="text-lg font-bold uppercase tracking-wide">Nana Adjei-Yeboah Otchere</h3>
