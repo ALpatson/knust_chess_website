@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const chessPieces = [
   { char: '♕', size: 'text-8xl' },
@@ -81,9 +82,12 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="bg-white text-black px-8 py-3 rounded-none font-semibold uppercase tracking-wider hover:bg-gray-200 transition-colors">
+            <Link 
+              to="/join"
+              className="inline-block bg-white text-black px-8 py-3 rounded-none font-semibold uppercase tracking-wider hover:bg-gray-200 transition-colors"
+            >
               Join the Club
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>

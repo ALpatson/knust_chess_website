@@ -6,6 +6,7 @@ import Executives from './pages/Executives';
 import Legends from './pages/Legends';
 import Events from './pages/Events';
 import About from './pages/About';
+import Join from './pages/Join';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/legends" element={<Legends />} />
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<About />} />
+            <Route path="/join" element={<Join />} />
           </Routes>
         </main>
         <Footer />
