@@ -2,9 +2,12 @@ const Footer = () => {
   return (
     <footer className="border-t border-white/10 bg-[#0a0f18] py-8 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex items-center gap-3">
-          <img src="/asset/Club_logo.jpeg" alt="KNUST Chess Club Logo" className="h-8 w-8 object-contain bg-white rounded-full p-0.5" onError={(e) => { e.target.style.display = 'none' }} />
-          <span className="font-semibold text-chess-accent">KNUST Chess Club</span>
+        <div className="flex flex-col items-center md:items-start gap-1">
+          <div className="flex items-center gap-3">
+            <img src="/asset/Club_logo.jpeg" alt="KNUST Chess Club Logo" className="h-8 w-8 object-contain bg-white rounded-full p-0.5" onError={(e) => { e.target.style.display = 'none' }} />
+            <span className="font-semibold text-chess-accent">KNUST Chess Club</span>
+          </div>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 pl-11 hidden md:block">Kwame Nkrumah University of Science and Technology</span>
         </div>
         <p className="text-sm text-chess-accent/60">
           © {new Date().getFullYear()} KNUST Chess Club. All rights reserved.
