@@ -45,12 +45,12 @@ const Join = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4 max-w-4xl mx-auto">
-      <div className="text-center mb-16">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 px-4 max-w-4xl mx-auto overflow-x-hidden">
+      <div className="text-center mb-10 md:mb-16">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold uppercase tracking-widest mb-6"
+          className="text-3xl md:text-6xl font-bold uppercase tracking-tight md:tracking-widest mb-4 md:mb-6"
         >
           Join the <span className="text-chess-accent">Elite</span>
         </motion.h1>
@@ -58,21 +58,23 @@ const Join = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-400 max-w-xl mx-auto text-lg"
+          className="text-gray-400 max-w-xl mx-auto text-sm md:text-lg px-4 leading-relaxed"
         >
           Become a member of the KNUST Chess Club and embark on a journey of strategy, intellect, and championship.
         </motion.p>
       </div>
 
-      <div className="relative">
-        {/* Decorative background elements */}
-        <div className="absolute -top-20 -left-20 w-64 h-64 bg-chess-accent/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-chess-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="relative w-full">
+        {/* Decorative background elements - Contained to prevent overflow */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+          <div className="absolute -top-20 -left-20 w-64 h-64 bg-chess-accent/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-chess-accent/5 rounded-full blur-3xl" />
+        </div>
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="glass-panel p-8 md:p-12 relative z-10 overflow-hidden"
+          className="glass-panel p-6 md:p-12 relative z-10"
         >
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
@@ -82,9 +84,9 @@ const Join = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onSubmit={handleSubmit} 
-                className="space-y-8"
+                className="space-y-6 md:space-y-8"
               >
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   {/* Name */}
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-[0.2em] font-bold text-chess-accent">Full Name *</label>
@@ -168,7 +170,7 @@ const Join = () => {
                 <div className="pt-6">
                   <button 
                     disabled={isLoading}
-                    className="w-full relative group overflow-hidden bg-white text-black font-bold uppercase tracking-widest py-4 transition-all duration-300"
+                    className="w-full relative group overflow-hidden bg-white text-black font-bold uppercase tracking-wider md:tracking-widest py-4 transition-all duration-300"
                   >
                     <div className="absolute inset-0 bg-chess-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                     <span className="relative z-10 flex items-center justify-center gap-2">
@@ -220,10 +222,10 @@ const Join = () => {
       </div>
 
       {/* Info section */}
-      <div className="mt-20 grid md:grid-cols-3 gap-10">
-        <div className="space-y-4 text-center p-6 border-r border-white/5 last:border-0 md:border-r flex flex-col items-center">
-          <div className="text-chess-accent mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/5 bg-white/[0.02] overflow-hidden">
+        <div className="space-y-4 text-center p-10 border-b md:border-b-0 md:border-r border-white/5 flex flex-col items-center hover:bg-white/[0.03] transition-colors group">
+          <div className="text-chess-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
               <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
@@ -231,11 +233,12 @@ const Join = () => {
             </svg>
           </div>
           <h4 className="font-bold uppercase tracking-widest text-xs text-chess-accent">Community</h4>
-          <p className="text-sm text-gray-500 leading-relaxed">Join a network of over 100+ passionate chess players at KNUST.</p>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-[200px]">Join a network of over 100+ passionate chess players at KNUST.</p>
         </div>
-        <div className="space-y-4 text-center p-6 border-r border-white/5 last:border-0 md:border-r flex flex-col items-center">
-          <div className="text-chess-accent mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+
+        <div className="space-y-4 text-center p-10 border-b md:border-b-0 md:border-r border-white/5 flex flex-col items-center hover:bg-white/[0.03] transition-colors group">
+          <div className="text-chess-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
               <path d="M12 6h4"/>
@@ -245,11 +248,12 @@ const Join = () => {
             </svg>
           </div>
           <h4 className="font-bold uppercase tracking-widest text-xs text-chess-accent">Training</h4>
-          <p className="text-sm text-gray-500 leading-relaxed">Access exclusive weekly training sessions and study materials.</p>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-[200px]">Access exclusive weekly training sessions and study materials.</p>
         </div>
-        <div className="space-y-4 text-center p-6 last:border-0 flex flex-col items-center">
-          <div className="text-chess-accent mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+
+        <div className="space-y-4 text-center p-10 flex flex-col items-center hover:bg-white/[0.03] transition-colors group">
+          <div className="text-chess-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
               <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
               <path d="M4 22h16"/>
@@ -259,7 +263,7 @@ const Join = () => {
             </svg>
           </div>
           <h4 className="font-bold uppercase tracking-widest text-xs text-chess-accent">Tournaments</h4>
-          <p className="text-sm text-gray-500 leading-relaxed">Compete in internal club matches and national university games.</p>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-[200px]">Compete in internal club matches and national university games.</p>
         </div>
       </div>
     </div>
