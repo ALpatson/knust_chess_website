@@ -7,6 +7,7 @@ import Legends from './pages/Legends';
 import Events from './pages/Events';
 import About from './pages/About';
 import Join from './pages/Join';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<About />} />
             <Route path="/join" element={<Join />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </main>
         <Footer />

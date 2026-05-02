@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { MapPin, CalendarDays, Clock } from 'lucide-react';
 
 const chessPieces = [
   { char: '♕', size: 'text-8xl' },
@@ -106,27 +107,40 @@ const Home = () => {
                 <p className="text-lg text-gray-400 max-w-lg leading-relaxed mt-6">
                   Ready to test your skills? Join us at our regular club meetings where we offer training lessons, host mini-tournaments, and play friendly games. All skill levels are welcome!
                 </p>
+
+                <div className="mt-8 pt-4">
+                  <p className="text-sm text-gray-400 mb-2 italic">Want to know more about the inspiring journeys behind the board?</p>
+                  <Link to="/blog" className="text-chess-accent font-bold uppercase tracking-widest text-sm hover:text-white transition-colors flex items-center gap-2 group w-max">
+                    Discover Club Stories <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Right side info blocks */}
             <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
               <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group">
-                <span className="text-3xl block mb-4 group-hover:scale-110 transition-transform origin-left">📍</span>
+                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <MapPin size={32} strokeWidth={1.5} />
+                </span>
                 <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Location</h4>
-                <p className="text-chess-accent">Engineering Tent (PB Tent)</p>
+                <p className="text-gray-400">Engineering Tent (PB Tent)</p>
               </div>
 
               <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group">
-                <span className="text-3xl block mb-4 group-hover:scale-110 transition-transform origin-left">📅</span>
+                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <CalendarDays size={32} strokeWidth={1.5} />
+                </span>
                 <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Days</h4>
-                <p className="text-chess-accent">Fridays & Saturdays</p>
+                <p className="text-gray-400">Fridays & Saturdays</p>
               </div>
 
               <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group sm:col-span-2">
-                <span className="text-3xl block mb-4 group-hover:scale-110 transition-transform origin-left">⏰</span>
+                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <Clock size={32} strokeWidth={1.5} />
+                </span>
                 <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Time</h4>
-                <p className="text-chess-accent flex items-center gap-4">
+                <p className="text-gray-400 flex items-center gap-4">
                   <span>4:30 PM - 8:00 PM</span>
                   <span className="h-1 w-1 bg-chess-accent rounded-full"></span>
                   <span className="uppercase text-xs tracking-widest text-white/50">Weekly</span>
