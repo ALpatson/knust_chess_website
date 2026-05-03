@@ -142,6 +142,18 @@ const legendsData = [
       "Winner, Fresher's Tournament (2025)"
     ],
     image: '/legends/Obeng_Lawrence.jpeg'
+  },
+  {
+    id: 13,
+    name: 'CM Maud Benson',
+    title: 'The Continental Champion',
+    description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women’s Chess Champion.',
+    achievements: [
+      "Two-time West African Women's Chess Champion",
+      "Represented Ghana on the international stage",
+      "Advocate for girls in STEM and chess"
+    ],
+    image: '/blogs/Maud_Benson.jpeg'
   }
 ];
 

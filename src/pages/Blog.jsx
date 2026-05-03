@@ -34,13 +34,11 @@ const blogPosts = [
       "Her dedication and consistent performance earned her one of the most remarkable accomplishments in her career: becoming a two-time West African Women’s Chess Champion. This achievement places her among the elite players in the region and highlights her as a key figure in African chess.",
       "Beyond the Chessboard",
       "Maud is not just a chess player she is a multifaceted individual balancing both technical and creative pursuits. Currently, she is undergoing training with the Reliability Engineering team at Cargill Cocoa, where she applies her knowledge from her Mechanical Engineering studies in a real-world industrial setting.",
-      "At the same time, she continues to compete in chess and contribute to the chess community through content creation. This blend of engineering, competitive play, and content creation reflects a modern, dynamic approach to career building.",
+      "At the same time, she continues to compete in chess and contribute to the chess community through content creation.",
       "Where Chess Meets Creativity",
       "One of the most fascinating aspects of Maud’s journey is how she integrates chess with technology and creativity. Beyond the board, she explores 3D modelling and design, showcasing her ability to think both logically and artistically.",
-      "This combination is rare, and powerful. Chess sharpens the mind, while creative design expands it. Together, they form a unique identity that sets her apart.",
       "Inspiring the Next Generation",
-      "Maud Benson’s story is more than just personal success, it’s a source of inspiration for young people, especially girls in STEM and chess across Africa. She proves that you don’t have to choose between academics, creativity, and passion, you can excel in all.",
-      "Her journey reminds us that greatness often starts from simple beginnings: a school activity, a spark of curiosity, and the willingness to keep going."
+      "Maud Benson’s story is more than just personal success, it’s a source of inspiration for young people, especially girls in STEM and chess across Africa. She proves that you don’t have to choose between academics, creativity, and passion, you can excel in all."
     ],
     image: "/blogs/Maud_Benson.jpeg",
     tags: ["Legend", "Inspiration", "Women in Chess"]
