@@ -15,8 +15,35 @@ const blogPosts = [
       "A fun fact about CM Anhwere is that he can teach himself anything. Fueled by his love for languages, he has taught himself to speak French, Spanish and is currently trying to add Mandarin Chinese to the list. Moreover, after studying civil engineering at KNUST, he works as a water resources engineer.",
       "From teaching himself chess at sixteen to becoming the national champion, his next dream is to defeat a grandmaster in an over-the-board classical game."
     ],
-    image: null,
+    image: "/blogs/CM Benard.jpeg",
     tags: ["Legend", "Inspiration", "National Champion"]
+  },
+  {
+    id: 2,
+    title: "CM Maud Benson's Journey",
+    author: "KNUST Chess Club",
+    date: "May 2026",
+    summary: "In the world of chess, where precision meets creativity and patience defines greatness, few stories are as inspiring as that of Maud Benson. Her journey, from a curious teenager discovering the game to becoming a two-time West African women’s champion...",
+    content: [
+      "In the world of chess, where precision meets creativity and patience defines greatness, few stories are as inspiring as that of Maud Benson. Her journey, from a curious teenager discovering the game to becoming a two-time West African women’s champion, reflects discipline, passion, and a drive to excel beyond boundaries.",
+      "Early Foundations",
+      "Maud’s academic journey began at the prestigious Achimota School, one of Ghana’s most respected institutions known for nurturing well-rounded individuals. There, she pursued General Science, laying a strong analytical foundation that would later complement her chess skills.",
+      "Her interest in chess began at the age of 14, not through formal training, but through extracurricular activities during her middle school years. What started as a casual engagement soon evolved into a deep passion. Like many great players, Maud didn’t just learn the rules, she learned to think, to anticipate, and to strategize.",
+      "Rising Through the Ranks",
+      "Every chess player has defining moments, and for Maud, one stands above the rest: representing Ghana on the international stage. Wearing national colors and competing globally is not just an achievement, it’s a statement of excellence and national pride.",
+      "Her dedication and consistent performance earned her one of the most remarkable accomplishments in her career: becoming a two-time West African Women’s Chess Champion. This achievement places her among the elite players in the region and highlights her as a key figure in African chess.",
+      "Beyond the Chessboard",
+      "Maud is not just a chess player she is a multifaceted individual balancing both technical and creative pursuits. Currently, she is undergoing training with the Reliability Engineering team at Cargill Cocoa, where she applies her knowledge from her Mechanical Engineering studies in a real-world industrial setting.",
+      "At the same time, she continues to compete in chess and contribute to the chess community through content creation. This blend of engineering, competitive play, and content creation reflects a modern, dynamic approach to career building.",
+      "Where Chess Meets Creativity",
+      "One of the most fascinating aspects of Maud’s journey is how she integrates chess with technology and creativity. Beyond the board, she explores 3D modelling and design, showcasing her ability to think both logically and artistically.",
+      "This combination is rare, and powerful. Chess sharpens the mind, while creative design expands it. Together, they form a unique identity that sets her apart.",
+      "Inspiring the Next Generation",
+      "Maud Benson’s story is more than just personal success, it’s a source of inspiration for young people, especially girls in STEM and chess across Africa. She proves that you don’t have to choose between academics, creativity, and passion, you can excel in all.",
+      "Her journey reminds us that greatness often starts from simple beginnings: a school activity, a spark of curiosity, and the willingness to keep going."
+    ],
+    image: "/blogs/Maud_Benson.jpeg",
+    tags: ["Legend", "Inspiration", "Women in Chess"]
   }
 ];
 
