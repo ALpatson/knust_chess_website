@@ -55,7 +55,7 @@ const blogPosts = [
       "Beyond his personal board victories, Michael considers his greatest achievement to be his transformative leadership of the KNUST Chess Club. Through unwavering dedication, he played a pivotal role in elevating the club into one of the most prestigious chess communities in the country, fostering an environment that continues to produce national champions.",
       "Today, Michael balances a demanding career as a medical doctor with his enduring passion for the game. Known arguably as the best speed chess player in the country, his focus has shifted towards the future of Ghanaian chess. As the current president of the Ashanti Regional Chess Association, he is deeply invested in developing young talent through initiatives like the 'Chess in Schools' program in the Ashanti Region, ensuring the next generation of players is ready to make their move."
     ],
-    image: "",
+    image: "/blogs/Micheal.jpeg",
     tags: ["Legend", "Leadership", "Speed Chess"]
   }
 ];
