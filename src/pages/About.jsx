@@ -91,6 +91,69 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Our Journey Section */}
+      <div className="max-w-5xl mx-auto mt-32 relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest mb-4">Our Journey</h2>
+          <div className="w-24 h-1 bg-chess-accent mx-auto"></div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 flex flex-col group"
+          >
+            <div className="text-chess-accent text-6xl font-bold opacity-30 mb-6 group-hover:opacity-100 transition-opacity">01</div>
+            <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wider">The Early Days</h3>
+            <span className="text-chess-accent font-bold tracking-widest text-xs uppercase block mb-6">2017 & Restructuring</span>
+            <p className="text-white/70 leading-relaxed flex-grow text-sm">
+              Initially operating as a joint Chess & Scrabble Club, the group faced significant structural and resource challenges that hindered serious chess development. A major turning point came when the two sports were separated. A dedicated executive board was established through a detailed selection process, replacing the previous single-president structure and laying a strong foundation for a focused chess community.
+            </p>
+          </motion.div>
+
+          {/* Card 2 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 flex flex-col group"
+          >
+            <div className="text-chess-accent text-6xl font-bold opacity-30 mb-6 group-hover:opacity-100 transition-opacity">02</div>
+            <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wider">The Rebirth</h3>
+            <span className="text-chess-accent font-bold tracking-widest text-xs uppercase block mb-6">National Recognition</span>
+            <p className="text-white/70 leading-relaxed flex-grow text-sm">
+              The biggest milestone was successfully re-establishing the chess club as an official sports club under the KNUST Sports Directorate. Supported by a chess enthusiast Sports Director, the club quickly secured vital resources—growing from a mere 3 chess sets for the entire university to a well-equipped hub. This rebirth brought recognition from the wider Ghana Chess Association, allowing the club to host prestigious events like the Kumasi Chess Classics and bilateral university games.
+            </p>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 flex flex-col group"
+          >
+            <div className="text-chess-accent text-6xl font-bold opacity-30 mb-6 group-hover:opacity-100 transition-opacity">03</div>
+            <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wider">The Modern Era</h3>
+            <span className="text-chess-accent font-bold tracking-widest text-xs uppercase block mb-6">Our Lasting Legacy</span>
+            <p className="text-white/70 leading-relaxed flex-grow text-sm">
+              Today, what was once a small gathering of enthusiasts has evolved into arguably the biggest and most active university chess club in the country. With structured weekly training sessions, active alumni mentorship, and the integration of online platforms, the club has built a vibrant, competitive community. Over the years, this dedication has proudly produced two national champions and one women’s national champion, alongside numerous players who have gone on to represent the country internationally.
+            </p>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

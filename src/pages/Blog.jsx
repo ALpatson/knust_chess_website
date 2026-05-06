@@ -42,6 +42,21 @@ const blogPosts = [
     ],
     image: "/blogs/Maud_Benson.jpeg",
     tags: ["Legend", "Inspiration", "Women in Chess"]
+  },
+  {
+    id: 3,
+    title: "Dr. Michael Giuseppe Sarkodie's Journey",
+    author: "KNUST Chess Club",
+    date: "May 2026",
+    summary: "From learning the moves as a child to becoming a medical doctor and the president of the Ashanti Regional Chess Association, Dr. Sarkodie’s journey is a story of resilience, leadership, and an undeniable love for speed chess.",
+    content: [
+      "Every chess master's journey begins with a single move. For Michael Giuseppe Sarkodie, that move was played around the age of nine when his father first introduced him to the chessboard. However, it wasn’t until his second year as a science student at St. Peter's Senior High School that the game truly captured his dedication. A chance encounter with CM Fomevor Cephas Clinton sparked a deep motivation within him. Learning the intricacies of the game from Cephas, Michael set a personal goal to consistently defeat his mentor, a milestone he proudly achieved, though he humbly admits his mentor still occasionally claims a victory.",
+      "Michael’s competitive spirit was truly tested at his first classical tournament, the Kumasi Chess Classics. After a challenging start where he struggled through the first three rounds, he dug deep and returned with fierce resolve. Winning his remaining four games, he remarkably secured the award for the best student performance in the entire tournament.",
+      "Beyond his personal board victories, Michael considers his greatest achievement to be his transformative leadership of the KNUST Chess Club. Through unwavering dedication, he played a pivotal role in elevating the club into one of the most prestigious chess communities in the country, fostering an environment that continues to produce national champions.",
+      "Today, Michael balances a demanding career as a medical doctor with his enduring passion for the game. Known arguably as the best speed chess player in the country, his focus has shifted towards the future of Ghanaian chess. As the current president of the Ashanti Regional Chess Association, he is deeply invested in developing young talent through initiatives like the 'Chess in Schools' program in the Ashanti Region, ensuring the next generation of players is ready to make their move."
+    ],
+    image: "",
+    tags: ["Legend", "Leadership", "Speed Chess"]
   }
 ];
 
