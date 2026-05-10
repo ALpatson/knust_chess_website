@@ -188,11 +188,18 @@ const Home = () => {
             {/* PDF Preview */}
             <div className="lg:w-1/2 w-full">
               <div className="glass-panel w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl relative">
-                <iframe 
-                  src="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#view=Fit" 
-                  title="Semester Calendar Preview"
-                  className="w-full h-full border-0 bg-white"
-                />
+                <object 
+                  data="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#zoom=page-width" 
+                  type="application/pdf" 
+                  className="w-full h-full bg-white"
+                >
+                  <iframe 
+                    src="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#zoom=page-width" 
+                    title="Semester Calendar Preview"
+                    className="w-full h-full border-0 bg-white"
+                    style={{ overflowX: 'hidden' }}
+                  />
+                </object>
               </div>
             </div>
 
