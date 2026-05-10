@@ -187,17 +187,12 @@ const Home = () => {
 
             {/* PDF Preview */}
             <div className="lg:w-1/2 w-full">
-              <div className="glass-panel p-2 md:p-4 border border-white/10 bg-gray-900/50">
-                <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative group bg-white/5 flex items-center justify-center rounded-lg">
-                  <iframe 
-                    src="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" 
-                    title="Semester Calendar Preview"
-                    className="w-full h-full border-0 bg-white"
-                    scrolling="no"
-                  />
-                  {/* Fallback overlay incase iframe takes time to load or isn't supported on some mobiles */}
-                  <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]" />
-                </div>
+              <div className="glass-panel w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl relative">
+                <iframe 
+                  src="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#view=Fit" 
+                  title="Semester Calendar Preview"
+                  className="w-full h-full border-0 bg-white"
+                />
               </div>
             </div>
 
