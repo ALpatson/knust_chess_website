@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MapPin, CalendarDays, Clock, Download } from 'lucide-react';
+import { pdfjs, Document, Page } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const chessPieces = [
   { char: '♕', size: 'text-8xl' },
@@ -187,19 +190,19 @@ const Home = () => {
 
             {/* PDF Preview */}
             <div className="lg:w-1/2 w-full">
-              <div className="glass-panel w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl relative">
-                <object 
-                  data="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#zoom=page-width" 
-                  type="application/pdf" 
-                  className="w-full h-full bg-white"
+              <div className="glass-panel w-full max-h-[500px] md:max-h-[600px] rounded-xl overflow-y-auto overflow-x-hidden border border-white/10 bg-white/5 shadow-2xl relative flex justify-center p-2 md:p-4">
+                <Document 
+                  file="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf"
+                  loading={<div className="text-white text-center py-20 animate-pulse">Loading Calendar...</div>}
+                  error={<div className="text-red-400 text-center py-20">Failed to load calendar. Please download it instead.</div>}
                 >
-                  <iframe 
-                    src="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf#zoom=page-width" 
-                    title="Semester Calendar Preview"
-                    className="w-full h-full border-0 bg-white"
-                    style={{ overflowX: 'hidden' }}
+                  <Page 
+                    pageNumber={1} 
+                    renderTextLayer={false} 
+                    renderAnnotationLayer={false} 
+                    className="max-w-full h-auto overflow-hidden rounded shadow-lg"
                   />
-                </object>
+                </Document>
               </div>
             </div>
 
