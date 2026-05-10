@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MapPin, CalendarDays, Clock, Download } from 'lucide-react';
@@ -15,6 +16,17 @@ const chessPieces = [
 ];
 
 const Home = () => {
+  const [pdfWidth, setPdfWidth] = useState(typeof window !== 'undefined' ? Math.min(window.innerWidth - 64, 600) : 400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // 64px accounts for mobile padding/margins. max 600px for desktop layouts.
+      setPdfWidth(Math.min(window.innerWidth - 64, 600));
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -198,6 +210,7 @@ const Home = () => {
                 >
                   <Page 
                     pageNumber={1} 
+                    width={pdfWidth}
                     renderTextLayer={false} 
                     renderAnnotationLayer={false} 
                     className="max-w-full h-auto overflow-hidden rounded shadow-lg"
