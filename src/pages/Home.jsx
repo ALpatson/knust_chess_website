@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MapPin, CalendarDays, Clock } from 'lucide-react';
+import { MapPin, CalendarDays, Clock, Users, Brain, Crown, Target } from 'lucide-react';
 
 const chessPieces = [
   { char: '♕', size: 'text-8xl' },
@@ -93,6 +93,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Meeting Details Section */}
       <section className="py-24 relative border-b border-white/5 bg-gray-900/30">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -148,6 +149,65 @@ const Home = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Membership Benefits Section */}
+      <section className="py-24 relative border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Why Join Us</h2>
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-chess-accent to-transparent mx-auto mb-6" />
+            <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-widest text-white">
+              Membership Benefits
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Benefit 1 */}
+            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Brain size={40} strokeWidth={1.5} />
+              </div>
+              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Cognitive Mastery</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Improve focus, strategic thinking, and problem-solving skills to give you an edge in your academic pursuits.
+              </p>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Crown size={40} strokeWidth={1.5} />
+              </div>
+              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Varsity Representation</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Get the chance to represent KNUST at the prestigious GUSA Games and other major inter-university tournaments.
+              </p>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Users size={40} strokeWidth={1.5} />
+              </div>
+              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Elite Networking</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Join an exclusive community of smart, like-minded individuals and build connections across all colleges.
+              </p>
+            </div>
+
+            {/* Benefit 4 */}
+            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Target size={40} strokeWidth={1.5} />
+              </div>
+              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Weekly Training</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Access to challenging puzzles, theory masterclasses, and simul exhibitions with top-rated university players.
+              </p>
+            </div>
           </div>
         </div>
       </section>
