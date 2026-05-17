@@ -1,10 +1,6 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MapPin, CalendarDays, Clock, Download } from 'lucide-react';
-import { pdfjs, Document, Page } from 'react-pdf';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { MapPin, CalendarDays, Clock } from 'lucide-react';
 
 const chessPieces = [
   { char: '♕', size: 'text-8xl' },
@@ -16,17 +12,6 @@ const chessPieces = [
 ];
 
 const Home = () => {
-  const [pdfWidth, setPdfWidth] = useState(typeof window !== 'undefined' ? Math.min(window.innerWidth - 64, 600) : 400);
-
-  useEffect(() => {
-    const handleResize = () => {
-      // 64px accounts for mobile padding/margins. max 600px for desktop layouts.
-      setPdfWidth(Math.min(window.innerWidth - 64, 600));
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -160,62 +145,6 @@ const Home = () => {
                   <span className="h-1 w-1 bg-chess-accent rounded-full"></span>
                   <span className="uppercase text-xs tracking-widest text-white/50">Weekly</span>
                 </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Semester Calendar Section */}
-      <section className="py-24 relative bg-black border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            
-            {/* Typography & Details */}
-            <div className="lg:w-1/2 space-y-8">
-              <div className="flex flex-col">
-                <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Plan Your Semester</h2>
-                <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent mb-6" />
-                <h3 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white leading-none">
-                  Club <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">Calendar</span>
-                </h3>
-              </div>
-              
-              <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-                Stay updated with all our events, tournaments, and regular meeting schedules for the second semester. Don't miss out on the action!
-              </p>
-              
-              <div className="pt-4 flex gap-4 flex-wrap">
-                <a
-                  href="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf"
-                  download="2nd_sem_KCC_Chess_Calendar.pdf"
-                  className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-chess-accent hover:bg-white hover:text-black overflow-hidden"
-                >
-                  <span className="relative uppercase tracking-widest text-sm flex items-center gap-2">
-                    <Download size={18} />
-                    Download PDF
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            {/* PDF Preview */}
-            <div className="lg:w-1/2 w-full">
-              <div className="glass-panel w-full max-h-[500px] md:max-h-[600px] rounded-xl overflow-y-auto overflow-x-hidden border border-white/10 bg-white/5 shadow-2xl relative flex justify-center p-2 md:p-4">
-                <Document 
-                  file="/asset/2nd%20sem%20KCC%20Chess%20Calendar.pdf"
-                  loading={<div className="text-white text-center py-20 animate-pulse">Loading Calendar...</div>}
-                  error={<div className="text-red-400 text-center py-20">Failed to load calendar. Please download it instead.</div>}
-                >
-                  <Page 
-                    pageNumber={1} 
-                    width={pdfWidth}
-                    renderTextLayer={false} 
-                    renderAnnotationLayer={false} 
-                    className="max-w-full h-auto overflow-hidden rounded shadow-lg"
-                  />
-                </Document>
               </div>
             </div>
 
