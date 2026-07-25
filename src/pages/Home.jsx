@@ -83,7 +83,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link 
+            <Link
               to="/join"
               className="inline-block bg-white text-black px-8 py-3 rounded-none font-semibold uppercase tracking-wider hover:bg-gray-200 transition-colors"
             >
@@ -242,15 +242,6 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="pt-2">
-                <Link
-                  to="/events"
-                  className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-chess-accent overflow-hidden"
-                >
-                  <div className="absolute inset-0 w-0 transition-all duration-300 ease-out bg-chess-accent group-hover:w-full"></div>
-                  <span className="relative uppercase tracking-widest text-sm group-hover:text-black">View Event Details</span>
-                </Link>
-              </div>
             </div>
 
             {/* Event Stats Card */}
