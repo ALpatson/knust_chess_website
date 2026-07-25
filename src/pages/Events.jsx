@@ -93,60 +93,60 @@ const Events = () => {
           <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative z-10">
+        <div className="flex flex-row items-center justify-center gap-2 sm:gap-8 lg:gap-24 relative z-10">
           {/* Champion 1: Luqman */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center gap-6 group"
+            className="flex flex-col items-center gap-3 sm:gap-6 group flex-1 max-w-[160px] sm:max-w-[240px]"
           >
-            <div className="w-56 h-56 rounded-full border-4 border-white/10 overflow-hidden relative group-hover:border-chess-accent transition-all duration-500 shadow-2xl scale-95 group-hover:scale-100">
-              <img src="/legends/Luqman_Abubakar.jpeg" alt="Luqman Abubakar" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+            <div className="w-24 h-24 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full border-2 sm:border-4 border-white/10 overflow-hidden relative group-hover:border-chess-accent transition-all duration-500 shadow-2xl scale-95 group-hover:scale-100">
+              <img src="/legends/Luqman_Abubakar.jpeg" alt="Luqman Abubakar" className="w-full h-full object-cover grayscale-0 sm:grayscale sm:group-hover:grayscale-0 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-4 left-0 right-0 text-center">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-chess-accent bg-black/40 px-3 py-1 backdrop-blur-sm">Challenger</span>
+              <div className="absolute bottom-2 sm:bottom-4 left-0 right-0 text-center">
+                <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-chess-accent bg-black/50 px-2 py-0.5 sm:px-3 sm:py-1 backdrop-blur-sm">Challenger</span>
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold uppercase tracking-wider text-white">Luqman Abubakar</h3>
-              <p className="text-[10px] uppercase tracking-widest text-gray-500 mt-1">2026 Challengers Champion</p>
+              <h3 className="text-xs sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-white">Luqman Abubakar</h3>
+              <p className="text-[8px] sm:text-[10px] uppercase tracking-widest text-gray-500 mt-0.5 sm:mt-1">2026 Challengers Champion</p>
             </div>
           </motion.div>
 
           {/* VS Divider */}
-          <div className="flex flex-col items-center gap-2 py-8">
+          <div className="flex flex-col items-center gap-1 sm:gap-2 py-2 sm:py-8 flex-shrink-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl font-black text-white/5 italic select-none tracking-tighter leading-none"
+              className="text-3xl sm:text-7xl md:text-9xl font-black text-white/20 sm:text-white/5 italic select-none tracking-tighter leading-none"
             >
               VS
             </motion.div>
-            <div className="w-20 h-1 bg-chess-accent" />
-            <p className="text-xs uppercase tracking-[0.4em] font-bold text-chess-accent mt-4 text-center leading-relaxed">
-              Battle for the <br /><span className="text-white">2026 University Title</span>
+            <div className="w-8 sm:w-20 h-0.5 sm:h-1 bg-chess-accent" />
+            <p className="text-[9px] sm:text-xs uppercase tracking-wider sm:tracking-[0.4em] font-bold text-chess-accent mt-2 text-center leading-tight sm:leading-relaxed">
+              Battle for the <br /><span className="text-white">2026 Title</span>
             </p>
           </div>
 
           {/* Champion 2: Charles */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center gap-6 group"
+            className="flex flex-col items-center gap-3 sm:gap-6 group flex-1 max-w-[160px] sm:max-w-[240px]"
           >
-            <div className="w-56 h-56 rounded-full border-4 border-white/10 overflow-hidden relative group-hover:border-chess-accent transition-all duration-500 shadow-2xl scale-95 group-hover:scale-100">
-              <img src="/legends/KCC_Champ.jpeg" alt="Amoani Charles Antwi" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+            <div className="w-24 h-24 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full border-2 sm:border-4 border-white/10 overflow-hidden relative group-hover:border-chess-accent transition-all duration-500 shadow-2xl scale-95 group-hover:scale-100">
+              <img src="/legends/KCC_Champ.jpeg" alt="Amoani Charles Antwi" className="w-full h-full object-cover grayscale-0 sm:grayscale sm:group-hover:grayscale-0 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-4 left-0 right-0 text-center">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-chess-accent bg-black/40 px-3 py-1 backdrop-blur-sm">Defending Champion</span>
+              <div className="absolute bottom-2 sm:bottom-4 left-0 right-0 text-center">
+                <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-chess-accent bg-black/50 px-2 py-0.5 sm:px-3 sm:py-1 backdrop-blur-sm">Defending Champ</span>
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold uppercase tracking-wider text-white">Amoani Charles Antwi</h3>
-              <p className="text-[10px] uppercase tracking-widest text-gray-500 mt-1">2025 Overall Champion</p>
+              <h3 className="text-xs sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-white">Charles Antwi</h3>
+              <p className="text-[8px] sm:text-[10px] uppercase tracking-widest text-gray-500 mt-0.5 sm:mt-1">2025 Overall Champion</p>
             </div>
           </motion.div>
         </div>
