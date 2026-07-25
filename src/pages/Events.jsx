@@ -84,11 +84,11 @@ const Events = () => {
       </div>
 
       {/* 2026 KNUST Championship Title Match */}
-      <div className="mb-32 relative overflow-hidden py-16">
+      <div className="mb-12 relative overflow-hidden py-8">
         {/* Background Accent */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[200px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
 
-        <div className="flex flex-col mb-16 relative z-10">
+        <div className="flex flex-col mb-8 relative z-10">
           <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Upcoming Major Event • The Ultimate Showdown</h2>
           <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
         </div>
@@ -156,34 +156,34 @@ const Events = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-20 text-center max-w-4xl mx-auto px-4"
+          className="mt-10 text-center max-w-4xl mx-auto px-4"
         >
-          <p className="text-xl text-gray-300 leading-relaxed font-light italic mb-16">
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light italic mb-8">
             "Two legends, one throne. A battle of wits and willpower where every move carries the weight of history. Will the reigning champion defend his legacy, or will the new challenger forge a new era of dominance?"
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left border-t border-white/10 pt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 text-left border-t border-white/10 pt-8">
             <div className="space-y-2 group">
               <span className="text-[10px] uppercase tracking-[0.3em] text-chess-accent font-bold block">Day 1 • 3 Rounds</span>
-              <span className="text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">25 / 07 / 2026</span>
+              <span className="text-xl md:text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">25 / 07 / 2026</span>
               <div className="h-0.5 w-12 bg-white/20 group-hover:w-full transition-all duration-500" />
             </div>
             
             <div className="space-y-2 group">
               <span className="text-[10px] uppercase tracking-[0.3em] text-chess-accent font-bold block">Day 2 • 4 Rounds</span>
-              <span className="text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">01 / 08 / 2026</span>
+              <span className="text-xl md:text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">01 / 08 / 2026</span>
               <div className="h-0.5 w-12 bg-white/20 group-hover:w-full transition-all duration-500" />
             </div>
 
             <div className="space-y-2 group">
               <span className="text-[10px] uppercase tracking-[0.3em] text-chess-accent font-bold block">Format</span>
-              <span className="text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">7 Rounds Total</span>
+              <span className="text-xl md:text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">7 Rounds Total</span>
               <div className="h-0.5 w-12 bg-white/20 group-hover:w-full transition-all duration-500" />
             </div>
 
             <div className="space-y-2 group">
               <span className="text-[10px] uppercase tracking-[0.3em] text-chess-accent font-bold block">Time Control</span>
-              <span className="text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">15 + 10 Rapid</span>
+              <span className="text-xl md:text-2xl font-bold text-white block group-hover:text-chess-accent transition-colors">15 + 10 Rapid</span>
               <div className="h-0.5 w-12 bg-white/20 group-hover:w-full transition-all duration-500" />
             </div>
           </div>
@@ -191,10 +191,10 @@ const Events = () => {
       </div>
       
       {/* Blitz Royale Section */}
-      <div className="mb-32 relative overflow-hidden py-16 border-t border-white/5">
+      <div className="mb-12 relative overflow-hidden py-8 border-t border-white/5">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[300px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
         
-        <div className="flex flex-col mb-12 relative z-10">
+        <div className="flex flex-col mb-6 relative z-10">
           <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">High-Speed Battle</h2>
           <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
         </div>
@@ -244,10 +244,10 @@ const Events = () => {
       </div>
 
       {/* KNUST Online Cup Chess Tournament */}
-      <div className="mb-32 relative overflow-hidden py-16 border-t border-white/5">
+      <div className="mb-12 relative overflow-hidden py-8 border-t border-white/5">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[300px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
 
-        <div className="flex flex-col mb-12 relative z-10">
+        <div className="flex flex-col mb-6 relative z-10">
           <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Online Cup Competition</h2>
           <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
         </div>
