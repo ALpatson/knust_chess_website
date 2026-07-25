@@ -212,8 +212,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Upcoming Event Section - Cardless & Creative */}
-      <section className="py-24 relative overflow-hidden">
+      {/* Upcoming Event Section - 2026 Championship Title Match */}
+      <section className="py-24 relative overflow-hidden border-b border-white/5">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-chess-accent/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -223,47 +223,55 @@ const Home = () => {
             <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-
-            {/* Typography & Details */}
-            <div className="lg:w-1/2 space-y-8 order-2 lg:order-1">
-              <h3 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-none text-white">
-                Queens<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-chess-accent to-white">Tournament</span>
-                <span className="block text-2xl tracking-widest text-white/50 mt-2">2026</span>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+            {/* Details */}
+            <div className="lg:w-1/2 space-y-8">
+              <h3 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter leading-none text-white">
+                2026 KNUST<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-chess-accent to-white">Championship</span>
+                <span className="block text-2xl tracking-widest text-white/50 mt-2">Title Match</span>
               </h3>
 
               <div className="pl-6 border-l-2 border-chess-accent/30 space-y-4">
                 <p className="text-xl text-gray-300 font-light leading-relaxed">
-                  An exclusive, highly competitive tournament strictly for females. Step up to the board, showcase your strategic brilliance, and compete for amazing prizes!
+                  Two legends, one throne. Luqman Abubakar challenges defending champion Amoani Charles Antwi in a 7-round battle for the 2026 University Title.
                 </p>
-                <div className="flex items-center gap-4 text-sm text-chess-accent uppercase tracking-widest font-bold">
-                  <span>Prizes to be won</span>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-chess-accent uppercase tracking-widest font-bold">
+                  <span>Day 1: 25 / 07 / 2026</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
-                  <span>Females Only</span>
+                  <span>Day 2: 01 / 08 / 2026</span>
                 </div>
               </div>
 
               <div className="pt-4">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfKtDGjfpwXVCWSYiwb34A3BdSHCVGqyQU-_zB2_vwZAwNjMg/viewform?usp=dialog"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/events"
                   className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-chess-accent overflow-hidden"
                 >
                   <div className="absolute inset-0 w-0 transition-all duration-300 ease-out bg-chess-accent group-hover:w-full"></div>
-                  <span className="relative uppercase tracking-widest text-sm group-hover:text-black">Register Now</span>
-                </a>
+                  <span className="relative uppercase tracking-widest text-sm group-hover:text-black">View Match Details</span>
+                </Link>
               </div>
             </div>
 
-            {/* Flyer/Visual Element - Floating without a heavy card */}
-            <div className="lg:w-1/2 order-1 lg:order-2 w-full max-w-md mx-auto">
-              <div className="relative group">
-                <div className="absolute -inset-4 border border-white/10 translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-                <div className="bg-gray-900 border border-white/5 overflow-hidden">
-                  <img src="/events/Queens.jpeg" alt="Queens Tournament 2026 Flyer" className="w-full h-auto" />
+            {/* Visual Matchup Card */}
+            <div className="lg:w-1/2 w-full flex items-center justify-center gap-6 glass-panel p-8 border border-white/10">
+              <div className="text-center space-y-3">
+                <div className="w-28 h-28 mx-auto rounded-full border-2 border-chess-accent overflow-hidden">
+                  <img src="/legends/Luqman_Abubakar.jpeg" alt="Luqman Abubakar" className="w-full h-full object-cover" />
                 </div>
+                <h4 className="text-sm font-bold uppercase text-white tracking-wider">Luqman Abubakar</h4>
+                <span className="text-[10px] text-chess-accent uppercase font-bold tracking-widest block">Challenger</span>
+              </div>
+
+              <div className="text-3xl font-black italic text-white/30 tracking-tighter">VS</div>
+
+              <div className="text-center space-y-3">
+                <div className="w-28 h-28 mx-auto rounded-full border-2 border-white/20 overflow-hidden">
+                  <img src="/legends/KCC_Champ.jpeg" alt="Amoani Charles Antwi" className="w-full h-full object-cover" />
+                </div>
+                <h4 className="text-sm font-bold uppercase text-white tracking-wider">Charles Antwi</h4>
+                <span className="text-[10px] text-chess-accent uppercase font-bold tracking-widest block">Defending Champion</span>
               </div>
             </div>
 
