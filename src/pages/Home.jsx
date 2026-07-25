@@ -154,57 +154,57 @@ const Home = () => {
       </section>
 
       {/* Membership Benefits Section */}
-      <section className="py-24 relative border-b border-white/5">
+      <section className="py-12 md:py-16 relative border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Why Join Us</h2>
-            <div className="h-px w-24 bg-gradient-to-r from-transparent via-chess-accent to-transparent mx-auto mb-6" />
-            <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-widest text-white">
+          <div className="text-center mb-8">
+            <h2 className="text-xs sm:text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Why Join Us</h2>
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-chess-accent to-transparent mx-auto mb-4" />
+            <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-widest text-white">
               Membership Benefits
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {/* Benefit 1 */}
-            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
-              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
-                <Brain size={40} strokeWidth={1.5} />
+            <div className="glass-panel p-4 sm:p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-3 sm:mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Brain className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
               </div>
-              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Cognitive Mastery</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <h4 className="text-sm sm:text-lg font-bold uppercase tracking-wide text-white mb-2 sm:mb-3">Cognitive Mastery</h4>
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 Improve focus, strategic thinking, and problem-solving skills to give you an edge in your academic pursuits.
               </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
-              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
-                <Crown size={40} strokeWidth={1.5} />
+            <div className="glass-panel p-4 sm:p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-3 sm:mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Crown className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
               </div>
-              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Varsity Representation</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <h4 className="text-sm sm:text-lg font-bold uppercase tracking-wide text-white mb-2 sm:mb-3">Varsity Representation</h4>
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 Get the chance to represent KNUST at the prestigious GUSA Games and other major inter-university tournaments.
               </p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
-              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
-                <Users size={40} strokeWidth={1.5} />
+            <div className="glass-panel p-4 sm:p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-3 sm:mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Users className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
               </div>
-              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Elite Networking</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <h4 className="text-sm sm:text-lg font-bold uppercase tracking-wide text-white mb-2 sm:mb-3">Elite Networking</h4>
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 Join an exclusive community of smart, like-minded individuals and build connections across all colleges.
               </p>
             </div>
 
             {/* Benefit 4 */}
-            <div className="glass-panel p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
-              <div className="text-chess-accent mb-6 group-hover:scale-110 transition-transform origin-left">
-                <Target size={40} strokeWidth={1.5} />
+            <div className="glass-panel p-4 sm:p-8 border-t-2 border-t-white/10 hover:border-t-chess-accent transition-all duration-300 group">
+              <div className="text-chess-accent mb-3 sm:mb-6 group-hover:scale-110 transition-transform origin-left">
+                <Target className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
               </div>
-              <h4 className="text-lg font-bold uppercase tracking-wide text-white mb-3">Weekly Training</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <h4 className="text-sm sm:text-lg font-bold uppercase tracking-wide text-white mb-2 sm:mb-3">Weekly Training</h4>
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                 Access to challenging puzzles, theory masterclasses, and simul exhibitions with top-rated university players.
               </p>
             </div>
@@ -213,7 +213,7 @@ const Home = () => {
       </section>
 
       {/* Upcoming Event Section - 2026 Championship Title Match */}
-      <section className="py-24 relative overflow-hidden border-b border-white/5">
+      <section className="py-12 md:py-16 relative overflow-hidden border-b border-white/5">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-chess-accent/5 rounded-full blur-[100px] pointer-events-none" />
 
