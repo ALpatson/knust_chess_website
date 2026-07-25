@@ -95,21 +95,21 @@ const Home = () => {
 
 
       {/* Meeting Details Section */}
-      <section className="py-24 relative border-b border-white/5 bg-gray-900/30">
+      <section className="py-12 md:py-16 relative border-b border-white/5 bg-gray-900/30">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
             {/* Left side text */}
-            <div className="lg:w-1/2 space-y-8">
+            <div className="lg:w-1/2 space-y-6">
               <div className="space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-widest text-white">
+                <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-white">
                   Join The <br /><span className="text-chess-accent">Action</span>
                 </h2>
-                <p className="text-lg text-gray-400 max-w-lg leading-relaxed mt-6">
+                <p className="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mt-4">
                   Ready to test your skills? Join us at our regular club meetings where we offer training lessons, host mini-tournaments, and play friendly games. All skill levels are welcome!
                 </p>
 
-                <div className="mt-8 pt-4">
+                <div className="mt-6 pt-2">
                   <p className="text-sm text-gray-400 mb-2 italic">Want to know more about the inspiring journeys behind the board?</p>
                   <Link to="/blog" className="text-chess-accent font-bold uppercase tracking-widest text-sm hover:text-white transition-colors flex items-center gap-2 group w-max">
                     Discover Club Stories <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -119,32 +119,32 @@ const Home = () => {
             </div>
 
             {/* Right side info blocks */}
-            <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-              <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group">
-                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
-                  <MapPin size={32} strokeWidth={1.5} />
+            <div className="lg:w-1/2 grid grid-cols-2 gap-4 sm:gap-8 w-full">
+              <div className="border-l-2 border-white/20 pl-4 sm:pl-6 py-2 hover:border-chess-accent transition-colors group">
+                <span className="text-chess-accent block mb-2 sm:mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <MapPin size={28} strokeWidth={1.5} />
                 </span>
-                <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Location</h4>
-                <p className="text-gray-400">Engineering Tent (PB Tent)</p>
+                <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm text-white mb-1">Location</h4>
+                <p className="text-xs sm:text-base text-gray-400">Engineering Tent (PB Tent)</p>
               </div>
 
-              <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group">
-                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
-                  <CalendarDays size={32} strokeWidth={1.5} />
+              <div className="border-l-2 border-white/20 pl-4 sm:pl-6 py-2 hover:border-chess-accent transition-colors group">
+                <span className="text-chess-accent block mb-2 sm:mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <CalendarDays size={28} strokeWidth={1.5} />
                 </span>
-                <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Days</h4>
-                <p className="text-gray-400">Fridays & Saturdays</p>
+                <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm text-white mb-1">Days</h4>
+                <p className="text-xs sm:text-base text-gray-400">Fridays & Saturdays</p>
               </div>
 
-              <div className="border-l-2 border-white/20 pl-6 py-2 hover:border-chess-accent transition-colors group sm:col-span-2">
-                <span className="text-chess-accent block mb-4 group-hover:scale-110 transition-transform origin-left">
-                  <Clock size={32} strokeWidth={1.5} />
+              <div className="border-l-2 border-white/20 pl-4 sm:pl-6 py-2 hover:border-chess-accent transition-colors group col-span-2">
+                <span className="text-chess-accent block mb-2 sm:mb-4 group-hover:scale-110 transition-transform origin-left">
+                  <Clock size={28} strokeWidth={1.5} />
                 </span>
-                <h4 className="font-bold uppercase tracking-wider text-sm text-white mb-1">Time</h4>
-                <p className="text-gray-400 flex items-center gap-4">
+                <h4 className="font-bold uppercase tracking-wider text-xs sm:text-sm text-white mb-1">Time</h4>
+                <p className="text-xs sm:text-base text-gray-400 flex items-center gap-3 sm:gap-4">
                   <span>4:30 PM - 8:00 PM</span>
                   <span className="h-1 w-1 bg-chess-accent rounded-full"></span>
-                  <span className="uppercase text-xs tracking-widest text-white/50">Weekly</span>
+                  <span className="uppercase text-[10px] sm:text-xs tracking-widest text-white/50">Weekly</span>
                 </p>
               </div>
             </div>
