@@ -403,7 +403,7 @@ const Events = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className={`relative group cursor-pointer overflow-hidden bg-gray-800 ${idx % 3 === 0 ? 'aspect-square' : 'aspect-[4/3]'} border border-white/10`}
+                className="relative group cursor-pointer overflow-hidden bg-gray-800 aspect-[4/3] border border-white/10"
                 onClick={() => setSelectedImage(media)}
               >
                 <img
