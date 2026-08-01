@@ -59,13 +59,35 @@ const legendsData = [
     id: 4,
     name: 'Jubilee Roxsanne Bleboo',
     title: 'The Fortress',
-    description: 'Our Financial Secretary and a dominant force in female competitive chess, consistently leading her college to victory.',
+    description: 'Our Financial Secretary and a dominant force in female competitive chess, winner of the maiden Queen\'s Tournament.',
     achievements: [
+      "Winner, Maiden Queen's Tournament (2026)",
       "1st Place (Female), Inter-College Games (2025)",
       "1st Place (Female), Inter-College Games (2026)",
       "Champion, College of Health Sciences (COHS)"
     ],
     image: '/executives/Jubilee_Roxsanne_Bleboo.jpeg'
+  },
+  {
+    id: 14,
+    name: 'Abena Yeboah Danso',
+    title: 'Queen\'s Tournament Runner-Up',
+    description: 'A formidable chess talent who captured 2nd Place in the maiden edition of the KNUST Queen\'s Tournament.',
+    achievements: [
+      "2nd Place, Maiden Queen's Tournament (2026)"
+    ],
+    image: null
+  },
+  {
+    id: 15,
+    name: 'Precious Paulina Adjei',
+    title: 'The Strategic Mind',
+    description: 'Our General Secretary and a core force in female competitive chess who secured 3rd Place in the maiden Queen\'s Tournament.',
+    achievements: [
+      "3rd Place, Maiden Queen's Tournament (2026)",
+      "General Secretary, KNUST Chess Club (2025-2026)"
+    ],
+    image: '/executives/precious.jpeg'
   },
   {
     id: 5,

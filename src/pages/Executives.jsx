@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 const executives = [
   { id: 1, name: 'Alexis Baffour Owusu Annor', role: 'President', piece: '♔ King', quote: '"Strategy is everything."', img: '/executives/president.jpeg' },
   { id: 2, name: 'Alpatson Cobbina Siaw', role: 'Vice President', piece: '♕ Queen', quote: '"Control the center."', img: '/executives/Vice_president.jpeg' },
-  { id: 3, name: 'Precious Paulina Adjei', role: 'Secretary', piece: '♗ Bishop', quote: '"Precision and timing."', img: '/executives/precious.jpeg' },
-  { id: 4, name: 'Jubilee Roxsanne Bleboo', role: 'Financial Sec.', piece: '♖ Rook', quote: '"Solid defense wins games."', img: '/executives/Jubilee_Roxsanne_Bleboo.jpeg' },
+  { id: 3, name: 'Precious Paulina Adjei', role: 'Secretary', piece: '♗ Bishop', quote: '"🥉 3rd Place, Maiden Queen\'s Tournament (2026)"', img: '/executives/precious.jpeg' },
+  { id: 4, name: 'Jubilee Roxsanne Bleboo', role: 'Financial Sec.', piece: '♖ Rook', quote: '"🥇 Champion, Maiden Queen\'s Tournament (2026)"', img: '/executives/Jubilee_Roxsanne_Bleboo.jpeg' },
   { id: 5, name: 'Queenstar Esenam Adjoa Sobo', role: 'Media Officer', piece: '♘ Knight', quote: '"Unpredictable moves."', img: '/executives/Media.jpeg' },
   { id: 6, name: 'Emmanuel Nana Kofi Oppong', role: 'Organising Sec.', piece: '♗ Bishop', quote: '"Perfect coordination is the key to victory."', img: '/executives/organising_secretary.jpeg' },
 ];

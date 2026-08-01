@@ -41,9 +41,16 @@ const eventGalleries = {
     { type: 'image', src: '/events/inter_colleges/inter_col5.jpeg', alt: 'Inter-Colleges Victory', year: '2026' },
   ],
   ladies: [
+    { type: 'image', src: '/events/Queens.jpeg', alt: 'Queen\'s Tournament 2026 Podium & Participants', year: '2026' },
     { type: 'image', src: '/events/ladies/ladies.jpeg', alt: 'Ladies Tournament Match', year: '2025' },
     { type: 'image', src: '/events/ladies/ladies1.jpeg', alt: 'Ladies Champion', year: '2025' },
     { type: 'image', src: '/events/ladies/ladies2.jpeg', alt: 'Ladies Group', year: '2025' },
+    { type: 'image', src: '/events/ladies/ladies3.png', alt: 'Queen\'s Tournament Match Action', year: '2026' },
+    { type: 'image', src: '/events/ladies/ladies4.png', alt: 'Queen\'s Tournament Match Focus', year: '2026' },
+    { type: 'image', src: '/events/ladies/ladies5.png', alt: 'Queen\'s Tournament Competitors', year: '2026' },
+    { type: 'image', src: '/events/ladies/ladies6.png', alt: 'Queen\'s Tournament Strategic Battle', year: '2026' },
+    { type: 'image', src: '/events/ladies/ladies7.png', alt: 'Queen\'s Tournament Highlights', year: '2026' },
+    { type: 'image', src: '/events/ladies/ladies8.png', alt: 'Queen\'s Tournament Victory Moment', year: '2026' },
   ]
 };
 
@@ -322,6 +329,95 @@ const Events = () => {
                   <div className="flex justify-between items-center text-gray-500">
                     <span>4th Place</span>
                     <span>GH₵ 30</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Queen's Tournament Maiden Edition Section */}
+      <div className="mb-12 relative overflow-hidden py-8 border-t border-white/5">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[300px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
+
+        <div className="flex flex-col mb-6 relative z-10">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">Maiden Edition • Female Championship</h2>
+          <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 relative z-10">
+          <div className="flex-1 space-y-6">
+            <div>
+              <span className="text-xs uppercase tracking-[0.3em] font-bold text-chess-accent block mb-2">KNUST Female Tournament 2026</span>
+              <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none text-white">
+                Queen's <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-chess-accent to-white">Tournament</span>
+              </h3>
+            </div>
+
+            <p className="text-lg text-gray-300 font-light italic border-l-2 border-chess-accent/40 pl-4">
+              "Celebrating excellence, tactical brilliance, and the rise of female grandmasters on the KNUST campus."
+            </p>
+
+            <p className="text-gray-400 leading-relaxed max-w-xl">
+              The Maiden Edition of the KNUST Queen's Tournament brought together top female chess strategists for an extraordinary battle of intellect and composure.
+            </p>
+
+            {/* Queen's Tournament Image Banner */}
+            <div className="w-full h-56 rounded-lg overflow-hidden border border-white/10 relative group">
+              <img src="/events/Queens.jpeg" alt="Queen's Tournament 2026" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-chess-accent">
+                2026 Maiden Queen's Tournament Highlights
+              </div>
+            </div>
+          </div>
+
+          {/* Podium Card */}
+          <div className="w-full lg:w-auto flex flex-col gap-6">
+            <div className="glass-panel p-8 border-l-4 border-chess-accent flex flex-col gap-6 min-w-[320px]">
+              <span className="text-xs uppercase tracking-[0.3em] font-bold text-chess-accent block border-b border-white/10 pb-3">
+                🏆 2026 Tournament Podium
+              </span>
+              
+              <div className="space-y-4">
+                {/* 1st Place */}
+                <div className="flex items-center gap-4 p-3 bg-white/5 rounded-lg border border-white/10 group hover:border-white/30 transition-colors">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-chess-accent flex-shrink-0 bg-gray-800">
+                    <img src="/executives/Jubilee_Roxsanne_Bleboo.jpeg" alt="Jubilee Roxsanne Bleboo" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-chess-accent">🥇 1st Place (Champion)</span>
+                    </div>
+                    <h4 className="text-sm font-bold uppercase text-white">Jubilee Roxsanne Bleboo</h4>
+                  </div>
+                </div>
+
+                {/* 2nd Place */}
+                <div className="flex items-center gap-4 p-3 bg-white/5 rounded-lg border border-white/10 group hover:border-white/30 transition-colors">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400 flex-shrink-0 bg-gray-800 flex items-center justify-center text-white/50 text-xl font-serif">
+                    ♕
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-gray-300">🥈 2nd Place (Runner-up)</span>
+                    </div>
+                    <h4 className="text-sm font-bold uppercase text-white">Abena Yeboah Danso</h4>
+                  </div>
+                </div>
+
+                {/* 3rd Place */}
+                <div className="flex items-center gap-4 p-3 bg-white/5 rounded-lg border border-white/10 group hover:border-white/30 transition-colors">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-600 flex-shrink-0 bg-gray-800">
+                    <img src="/executives/precious.jpeg" alt="Precious Paulina Adjei" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-amber-500">🥉 3rd Place</span>
+                    </div>
+                    <h4 className="text-sm font-bold uppercase text-white">Precious Paulina Adjei</h4>
                   </div>
                 </div>
               </div>

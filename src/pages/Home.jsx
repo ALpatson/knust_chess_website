@@ -312,8 +312,69 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Featured Queen's Tournament Champion (Maiden Edition) */}
+        <div className="mb-16">
+          <div className="glass-panel p-8 md:p-12 border-t-4 border-t-chess-accent flex flex-col md:flex-row items-center text-center md:text-left gap-10 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden">
+            {/* Background Decorative Text */}
+            <div className="absolute right-0 bottom-0 text-[5rem] md:text-[12rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
+              Queens
+            </div>
+
+            <div className="w-64 h-64 bg-gray-800 rounded-full border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
+              <img src="/executives/Jubilee_Roxsanne_Bleboo.jpeg" alt="Queen's Tournament Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 absolute z-10" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
+                <span className="text-7xl mb-2">♕</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none" />
+            </div>
+
+            <div className="space-y-6 relative z-10">
+              <div>
+                <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-chess-accent mb-2">Queen's Tournament Champion (2026)</h2>
+                <h3 className="text-4xl md:text-6xl font-bold uppercase tracking-tight text-white leading-none">Jubilee Roxsanne Bleboo</h3>
+              </div>
+              <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+                Crowned 1st Place Champion in the maiden edition of the KNUST Queen's Tournament. A tactical powerhouse and Financial Secretary who continues to lead female competitive chess at KNUST.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <span className="px-4 py-1 border border-chess-accent/30 rounded-full text-xs uppercase tracking-widest text-chess-accent">🥇 1st Place (Champion)</span>
+                <span className="px-4 py-1 border border-chess-accent/30 rounded-full text-xs uppercase tracking-widest text-chess-accent">Maiden Edition</span>
+                <span className="px-4 py-1 border border-chess-accent/30 rounded-full text-xs uppercase tracking-widest text-chess-accent">COHS Champion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Other Major Champions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {/* Queen's Tournament 2nd Place */}
+          <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-gray-300">
+            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Queen's Tourney 2nd Place (2026)</h2>
+            <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-gray-300 transition-colors duration-300">
+              <div className="absolute inset-0 flex items-center justify-center text-4xl text-white/50 font-serif">
+                ♕
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-bold uppercase tracking-wide">Abena Yeboah Danso</h3>
+              <p className="text-xs text-chess-accent leading-relaxed"> 2nd Place in the maiden KNUST Queen's Tournament.</p>
+            </div>
+          </div>
+
+          {/* Queen's Tournament 3rd Place */}
+          <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-amber-600">
+            <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Queen's Tourney 3rd Place (2026)</h2>
+            <div className="w-32 h-32 bg-gray-800 rounded-full border border-white/10 relative overflow-hidden flex items-center justify-center group-hover:border-amber-600 transition-colors duration-300">
+              <img src="/executives/precious.jpeg" alt="Queen's 3rd Place" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-500 absolute z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none" />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-bold uppercase tracking-wide">Precious Paulina Adjei</h3>
+              <p className="text-xs text-chess-accent leading-relaxed"> 3rd Place in the maiden KNUST Queen's Tournament.</p>
+            </div>
+          </div>
+
           {/* Overall Champion */}
           <div className="glass-panel p-6 flex flex-col items-center text-center gap-6 group hover:bg-white/5 transition-colors border-t-2 border-t-white">
             <h2 className="text-[10px] font-bold tracking-widest uppercase text-chess-accent w-full border-b border-white/10 pb-3">Overall KNUST Champion (2025)</h2>
