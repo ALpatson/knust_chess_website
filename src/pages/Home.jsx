@@ -280,64 +280,64 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest border-b border-white/10 inline-block pb-4">Our Champions</h2>
         </div>
 
-        {/* Featured Champions Grid (Maiden Editions Side-by-Side) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        {/* Featured Champions Grid (Maiden Editions Side-by-Side on all devices) */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 mb-16">
           {/* Featured Challenger (Maiden Edition) */}
-          <div className="glass-panel p-6 sm:p-8 border-t-4 border-t-chess-accent flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden h-full">
+          <div className="glass-panel p-3 sm:p-6 md:p-8 border-t-2 sm:border-t-4 border-t-chess-accent flex flex-col items-center text-center gap-3 sm:gap-6 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden h-full">
             {/* Background Decorative Text */}
-            <div className="absolute right-0 bottom-0 text-[4rem] sm:text-[7rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
+            <div className="absolute right-0 bottom-0 text-[3rem] sm:text-[5rem] md:text-[7rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
               Maiden
             </div>
 
-            <div className="w-40 h-40 sm:w-44 sm:h-44 bg-gray-800 rounded-full border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
+            <div className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gray-800 rounded-full border-2 sm:border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
               <img src="/legends/Luqman_Abubakar.jpeg" alt="Challenger's Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 absolute z-10" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
-                <span className="text-5xl mb-2">⚔️</span>
+                <span className="text-3xl sm:text-5xl mb-2">⚔️</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none" />
             </div>
 
-            <div className="space-y-4 relative z-10 flex flex-col justify-between h-full">
+            <div className="space-y-2 sm:space-y-4 relative z-10 flex flex-col justify-between h-full w-full">
               <div>
-                <h2 className="text-xs font-bold tracking-[0.25em] uppercase text-chess-accent mb-2">KCC Challenger's Champion (2026)</h2>
-                <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-white leading-tight mb-3">Luqman Abubakar</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Emerged as the victor of the maiden edition of the KCC Challenger's Tournament. A tactical rising star whose dominance in the 2026 season has set a new standard for the club.
+                <h2 className="text-[8px] sm:text-xs font-bold tracking-wider sm:tracking-[0.25em] uppercase text-chess-accent mb-1 sm:mb-2">KCC Challenger's Champion (2026)</h2>
+                <h3 className="text-sm sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-white leading-tight mb-1 sm:mb-3">Luqman Abubakar</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm leading-normal sm:leading-relaxed">
+                  Emerged as the victor of the maiden edition of the KCC Challenger's Tournament. A tactical rising star whose dominance in the 2026 season has set a new standard.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2 justify-center sm:justify-start pt-2">
-                <span className="px-3 py-1 border border-chess-accent/30 rounded-full text-[10px] uppercase tracking-widest text-chess-accent">Maiden Edition</span>
-                <span className="px-3 py-1 border border-chess-accent/30 rounded-full text-[10px] uppercase tracking-widest text-chess-accent">COS Team Member</span>
+              <div className="flex flex-wrap gap-1 sm:gap-2 justify-center pt-1 sm:pt-2">
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 border border-chess-accent/30 rounded-full text-[8px] sm:text-[10px] uppercase tracking-widest text-chess-accent">Maiden Edition</span>
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 border border-chess-accent/30 rounded-full text-[8px] sm:text-[10px] uppercase tracking-widest text-chess-accent">COS Team</span>
               </div>
             </div>
           </div>
 
           {/* Featured Queen's Tournament Champion (Maiden Edition) */}
-          <div className="glass-panel p-6 sm:p-8 border-t-4 border-t-chess-accent flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden h-full">
+          <div className="glass-panel p-3 sm:p-6 md:p-8 border-t-2 sm:border-t-4 border-t-chess-accent flex flex-col items-center text-center gap-3 sm:gap-6 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden h-full">
             {/* Background Decorative Text */}
-            <div className="absolute right-0 bottom-0 text-[4rem] sm:text-[7rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
+            <div className="absolute right-0 bottom-0 text-[3rem] sm:text-[5rem] md:text-[7rem] font-bold text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none">
               Queens
             </div>
 
-            <div className="w-40 h-40 sm:w-44 sm:h-44 bg-gray-800 rounded-full border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
+            <div className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gray-800 rounded-full border-2 sm:border-4 border-chess-accent/30 relative overflow-hidden flex-shrink-0 group-hover:border-chess-accent transition-colors duration-300">
               <img src="/executives/Jubilee_Roxsanne_Bleboo.jpeg" alt="Queen's Tournament Champion" className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 absolute z-10" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white/20">
-                <span className="text-5xl mb-2">♕</span>
+                <span className="text-3xl sm:text-5xl mb-2">♕</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none" />
             </div>
 
-            <div className="space-y-4 relative z-10 flex flex-col justify-between h-full">
+            <div className="space-y-2 sm:space-y-4 relative z-10 flex flex-col justify-between h-full w-full">
               <div>
-                <h2 className="text-xs font-bold tracking-[0.25em] uppercase text-chess-accent mb-2">Queen's Tournament Champion (2026)</h2>
-                <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-white leading-tight mb-3">Jubilee Roxsanne Bleboo</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Crowned 1st Place Champion in the maiden edition of the KNUST Queen's Tournament. A tactical powerhouse and Financial Secretary who continues to lead female competitive chess at KNUST.
+                <h2 className="text-[8px] sm:text-xs font-bold tracking-wider sm:tracking-[0.25em] uppercase text-chess-accent mb-1 sm:mb-2">Queen's Tournament Champion (2026)</h2>
+                <h3 className="text-sm sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-white leading-tight mb-1 sm:mb-3">Jubilee Roxsanne Bleboo</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm leading-normal sm:leading-relaxed">
+                  Crowned 1st Place Champion in the maiden edition of the KNUST Queen's Tournament. A tactical powerhouse and Financial Secretary.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2 justify-center sm:justify-start pt-2">
-                <span className="px-3 py-1 border border-chess-accent/30 rounded-full text-[10px] uppercase tracking-widest text-chess-accent">🥇 1st Place (Champion)</span>
-                <span className="px-3 py-1 border border-chess-accent/30 rounded-full text-[10px] uppercase tracking-widest text-chess-accent">Maiden Edition</span>
+              <div className="flex flex-wrap gap-1 sm:gap-2 justify-center pt-1 sm:pt-2">
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 border border-chess-accent/30 rounded-full text-[8px] sm:text-[10px] uppercase tracking-widest text-chess-accent">🥇 1st Place</span>
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 border border-chess-accent/30 rounded-full text-[8px] sm:text-[10px] uppercase tracking-widest text-chess-accent">Maiden Edition</span>
               </div>
             </div>
           </div>
