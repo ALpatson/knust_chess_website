@@ -92,14 +92,15 @@ const legendsData = [
   {
     id: 5,
     name: 'Akwasi Poku',
-    title: 'The Calm Strategist',
-    description: 'A formidable competitor known for his calm composure and precise execution under pressure.',
+    title: 'The KCC Champion',
+    description: 'A formidable competitor and tactical mastermind, crowned the 2026 KCC Champion.',
     achievements: [
+      "Winner, KCC Championship (2026)",
       "2nd Place, KCC Championship (2025)",
       "Winner, KCC Get Together (2024)",
       "2nd Place, KCC Challengers Championship (2026)"
     ],
-    image: '/legends/KCC_Champ2nd.jpeg'
+    image: '/legends/akwasi_champion.jpeg'
   },
   {
     id: 7,
