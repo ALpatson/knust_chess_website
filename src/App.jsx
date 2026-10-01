@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChessSplash from './components/ChessSplash';
 import Home from './pages/Home';
 import Executives from './pages/Executives';
 import Legends from './pages/Legends';
@@ -12,6 +13,7 @@ import Blog from './pages/Blog';
 function App() {
   return (
     <Router>
+      <ChessSplash />
       <div className="flex flex-col min-h-screen bg-chess-black text-chess-white">
         <Navbar />
         <main className="flex-grow">
