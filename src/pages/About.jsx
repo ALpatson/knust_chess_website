@@ -133,7 +133,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-wider">The Rebirth</h3>
             <span className="text-chess-accent font-bold tracking-widest text-xs uppercase block mb-6">National Recognition</span>
             <p className="text-white/70 leading-relaxed flex-grow text-sm">
-              The biggest milestone was successfully re-establishing the chess club as an official sports club under the KNUST Sports Directorate. Supported by a chess enthusiast Sports Director, the club quickly secured vital resources—growing from a mere 3 chess sets for the entire university to a well-equipped hub. This rebirth brought recognition from the wider Ghana Chess Association, allowing the club to host prestigious events like the Kumasi Chess Classics and bilateral university games.
+              The biggest milestone was successfully re-establishing the chess club as an official sports club under the KNUST Sports Directorate. Supported by a chess enthusiast Sports Director, the club quickly secured vital resources-growing from a mere 3 chess sets for the entire university to a well-equipped hub. This rebirth brought recognition from the wider Ghana Chess Association, allowing the club to host prestigious events like the Kumasi Chess Classics and bilateral university games.
             </p>
           </motion.div>
 

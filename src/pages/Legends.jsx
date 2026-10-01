@@ -2,19 +2,6 @@ import { motion } from 'framer-motion';
 
 const legendsData = [
   {
-    id: 6,
-    name: 'Johnny Edem Agboado',
-    title: 'The Arbiter & Mathematician',
-    description: 'A dedicated coach and certified arbiter who revolutionized the club\'s competitive landscape by developing the official KCC Player Rating System.',
-    achievements: [
-      "Architect of the Official KCC Rating Formula",
-      "2nd Place, KNUST Freestyle Tournament (2025)",
-      "Lead Coach and Tutor to Club Members",
-      "Official Arbiter for Major Club Events"
-    ],
-    image: '/legends/Johnny_Edem_Agboado.jpeg'
-  },
-  {
     id: 1,
     name: 'Alpatson Cobbina Siaw',
     title: 'The Unstoppable Force',
@@ -31,6 +18,32 @@ const legendsData = [
     image: '/legends/Vice_president.jpeg'
   },
   {
+    id: 13,
+    name: 'FM Maud Benson',
+    title: 'The Continental Champion',
+    description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women\'s Chess Champion and Chess Olympiad gold medalist.',
+    achievements: [
+      "Gold Medal, Chess Olympiad 2026 (Teams Rating Category)",
+      "Two-time West African Women's Chess Champion",
+      "Represented Ghana on the international stage",
+      "Advocate for girls in STEM and chess"
+    ],
+    image: '/blogs/Maud_Benson.jpeg'
+  },
+  {
+    id: 5,
+    name: 'Akwasi Poku',
+    title: 'The KCC Champion',
+    description: 'A formidable competitor and tactical mastermind, crowned the 2026 KCC Champion.',
+    achievements: [
+      "Winner, KCC Championship (2026)",
+      "2nd Place, KCC Championship (2025)",
+      "Winner, KCC Get Together (2024)",
+      "2nd Place, KCC Challengers Championship (2026)"
+    ],
+    image: '/legends/akwasi_champion.jpeg'
+  },
+  {
     id: 2,
     name: 'Alexis Baffour Owusu Annor',
     title: 'The Grandmaster Lead',
@@ -42,18 +55,6 @@ const legendsData = [
       "3rd Place, KCC Challengers Championship (2026)"
     ],
     image: '/executives/president.jpeg'
-  },
-  {
-    id: 3,
-    name: 'Amoani Charles Antwi',
-    title: 'The Prodigy',
-    description: 'An exceptional player whose mastery of the board led to back-to-back major championships.',
-    achievements: [
-      "Winner, Fresher's Tournament (2024)",
-      "KNUST Champion (2025)",
-      "Winner, College Championship (2025)"
-    ],
-    image: '/legends/KCC_Champ.jpeg'
   },
   {
     id: 4,
@@ -69,14 +70,29 @@ const legendsData = [
     image: '/executives/Jubilee_Roxsanne_Bleboo.jpeg'
   },
   {
-    id: 14,
-    name: 'Abena Yeboah Danso',
-    title: 'Queen\'s Tournament Runner-Up',
-    description: 'A formidable chess talent who captured 2nd Place in the maiden edition of the KNUST Queen\'s Tournament.',
+    id: 6,
+    name: 'Johnny Edem Agboado',
+    title: 'The Arbiter & Mathematician',
+    description: 'A dedicated coach and certified arbiter who revolutionized the club\'s competitive landscape by developing the official KCC Player Rating System.',
     achievements: [
-      "2nd Place, Maiden Queen's Tournament (2026)"
+      "Architect of the Official KCC Rating Formula",
+      "2nd Place, KNUST Freestyle Tournament (2025)",
+      "Lead Coach and Tutor to Club Members",
+      "Official Arbiter for Major Club Events"
     ],
-    image: null
+    image: '/legends/Johnny_Edem_Agboado.jpeg'
+  },
+  {
+    id: 3,
+    name: 'Amoani Charles Antwi',
+    title: 'The Prodigy',
+    description: 'An exceptional player whose mastery of the board led to back-to-back major championships.',
+    achievements: [
+      "Winner, Fresher's Tournament (2024)",
+      "KNUST Champion (2025)",
+      "Winner, College Championship (2025)"
+    ],
+    image: '/legends/KCC_Champ.jpeg'
   },
   {
     id: 15,
@@ -88,19 +104,6 @@ const legendsData = [
       "General Secretary, KNUST Chess Club (2025-2026)"
     ],
     image: '/executives/precious.jpeg'
-  },
-  {
-    id: 5,
-    name: 'Akwasi Poku',
-    title: 'The KCC Champion',
-    description: 'A formidable competitor and tactical mastermind, crowned the 2026 KCC Champion.',
-    achievements: [
-      "Winner, KCC Championship (2026)",
-      "2nd Place, KCC Championship (2025)",
-      "Winner, KCC Get Together (2024)",
-      "2nd Place, KCC Challengers Championship (2026)"
-    ],
-    image: '/legends/akwasi_champion.jpeg'
   },
   {
     id: 7,
@@ -147,6 +150,16 @@ const legendsData = [
     image: '/legends/solomon.jpeg'
   },
   {
+    id: 14,
+    name: 'Abena Yeboah Danso',
+    title: 'Queen\'s Tournament Runner-Up',
+    description: 'A formidable chess talent who captured 2nd Place in the maiden edition of the KNUST Queen\'s Tournament.',
+    achievements: [
+      "2nd Place, Maiden Queen's Tournament (2026)"
+    ],
+    image: null
+  },
+  {
     id: 11,
     name: 'Nana Adjei-Yeboah Otchere',
     title: 'The Rising Legend',
@@ -165,19 +178,6 @@ const legendsData = [
       "Winner, Fresher's Tournament (2025)"
     ],
     image: '/legends/Obeng_Lawrence.jpeg'
-  },
-  {
-    id: 13,
-    name: 'CM Maud Benson',
-    title: 'The Continental Champion',
-    description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women\'s Chess Champion and Chess Olympiad gold medalist.',
-    achievements: [
-      "Gold Medal, Chess Olympiad 2026 (Teams Rating Category)",
-      "Two-time West African Women's Chess Champion",
-      "Represented Ghana on the international stage",
-      "Advocate for girls in STEM and chess"
-    ],
-    image: '/blogs/Maud_Benson.jpeg'
   }
 ];
 
@@ -203,7 +203,7 @@ const Legends = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {legendsData.map((legend, index) => (
+        {[...legendsData].sort((a, b) => b.achievements.length - a.achievements.length).map((legend, index) => (
           <motion.div
             key={legend.id}
             initial={{ opacity: 0, scale: 0.95 }}

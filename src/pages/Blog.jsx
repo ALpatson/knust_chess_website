@@ -5,14 +5,14 @@ import { X, ChevronRight, Calendar, User } from 'lucide-react';
 const blogPosts = [
   {
     id: 1,
-    title: "CM Benard Anhwere's Journey",
+    title: "FM Benard Anhwere's Journey",
     author: "KNUST Chess Club",
     date: "May 2026",
-    summary: "CM Benard Anhwere's success story did not begin with the conventional stories we are used to in the chess scene. His journey with chess did not start when he was about five...",
+    summary: "FM Benard Anhwere's success story did not begin with the conventional stories we are used to in the chess scene. His journey with chess did not start when he was about five...",
     content: [
-      "CM Benard Anhwere's success story (spoiler alert) did not begin with the conventional stories we are used to in the chess scene. His journey with chess did not start when he was about five, six or seven years old. Nor did it start he was about eight. His first introduction to chess was at sixteen, when he saw a group of boys intently perusing an 8×8 checkered board with distinct pieces at Presbyterian Boys' Secondary School, Legon.",
+      "FM Benard Anhwere's success story (spoiler alert) did not begin with the conventional stories we are used to in the chess scene. His journey with chess did not start when he was about five, six or seven years old. Nor did it start he was about eight. His first introduction to chess was at sixteen, when he saw a group of boys intently perusing an 8×8 checkered board with distinct pieces at Presbyterian Boys' Secondary School, Legon.",
       "Today, he holds the Ghana National Chess Championship (2025) title and has represented Ghana in several chess Olympiads. According to him, Representing Ghana at the 44th FIDE Chess Olympiad in India (his first Olympiad) was the most surreal moment of his chess career. He had grown from the sixteen-year-old boy that decided to teach himself chess using the internet to a twenty-six-year-old representing Ghana at such an international stage.",
-      "A fun fact about CM Anhwere is that he can teach himself anything. Fueled by his love for languages, he has taught himself to speak French, Spanish and is currently trying to add Mandarin Chinese to the list. Moreover, after studying civil engineering at KNUST, he works as a water resources engineer.",
+      "A fun fact about FM Anhwere is that he can teach himself anything. Fueled by his love for languages, he has taught himself to speak French, Spanish and is currently trying to add Mandarin Chinese to the list. Moreover, after studying civil engineering at KNUST, he works as a water resources engineer.",
       "From teaching himself chess at sixteen to becoming the national champion, his next dream is to defeat a grandmaster in an over-the-board classical game."
     ],
     image: "/blogs/CM Benard.jpeg",
@@ -20,10 +20,10 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "CM Maud Benson's Journey",
+    title: "FM Maud Benson's Journey",
     author: "KNUST Chess Club",
     date: "May 2026",
-    summary: "From a curious teenager to a two-time West African Women’s Champion and Chess Olympiad 2026 gold medalist — Maud Benson’s story is one of discipline, passion, and breaking boundaries.",
+    summary: "From a curious teenager to a two-time West African Women’s Champion and Chess Olympiad 2026 gold medalist - Maud Benson’s story is one of discipline, passion, and breaking boundaries.",
     content: [
       "In the world of chess, where precision meets creativity and patience defines greatness, few stories are as inspiring as that of Maud Benson. Her journey, from a curious teenager discovering the game to becoming a two-time West African women’s champion, reflects discipline, passion, and a drive to excel beyond boundaries.",
       "Early Foundations",
@@ -32,7 +32,7 @@ const blogPosts = [
       "Rising Through the Ranks",
       "Every chess player has defining moments, and for Maud, one stands above the rest: representing Ghana on the international stage. Wearing national colors and competing globally is not just an achievement, it’s a statement of excellence and national pride.",
       "Her dedication and consistent performance earned her one of the most remarkable accomplishments in her career: becoming a two-time West African Women’s Chess Champion. This achievement places her among the elite players in the region and highlights her as a key figure in African chess.",
-      "Chess Olympiad 2026 — Gold Medal",
+      "Chess Olympiad 2026 - Gold Medal",
       "In 2026, Maud reached the pinnacle of her international chess career, winning a Gold Medal at the Chess Olympiad in the Teams Rating Category. This historic achievement cements her legacy as one of Ghana’s greatest chess exports and a trailblazer for women in African chess.",
       "Beyond the Chessboard",
       "Maud is not just a chess player she is a multifaceted individual balancing both technical and creative pursuits. Currently, she is undergoing training with the Reliability Engineering team at Cargill Cocoa, where she applies her knowledge from her Mechanical Engineering studies in a real-world industrial setting.",
@@ -65,17 +65,17 @@ const blogPosts = [
     title: "Dr. Kwabena Adu Poku's Journey",
     author: "KNUST Chess Club",
     date: "October 2026",
-    summary: "Introduced to chess at 15 through a friend's event, Dr. Kwabena Adu Poku went on to win the Tema Chess Classics against West African competitors and claim the Ghana National Chess Title three times in a row — all while practicing medicine.",
+    summary: "Introduced to chess at 15 through a friend's event, Dr. Kwabena Adu Poku went on to win the Tema Chess Classics against West African competitors and claim the Ghana National Chess Title three times in a row - all while practicing medicine.",
     content: [
-      "Dr. (Med) Kwabena Adu Poku's story is a testament to the idea that chess and professional excellence can go hand in hand. A product of Opoku Ware School where he studied science, Dr. Adu Poku was first introduced to the sport at age 15 — not through a formal training program, but through the simple joy of attending a friend's chess event.",
-      "That casual introduction lit a fire that would fuel decades of competitive chess. Where many great players spend their formative years drilling openings and endgames, Dr. Adu Poku came to the game with fresh eyes and a scientific mind — and he made it count.",
+      "Dr. (Med) Kwabena Adu Poku's story is a testament to the idea that chess and professional excellence can go hand in hand. A product of Opoku Ware School where he studied science, Dr. Adu Poku was first introduced to the sport at age 15 - not through a formal training program, but through the simple joy of attending a friend's chess event.",
+      "That casual introduction lit a fire that would fuel decades of competitive chess. Where many great players spend their formative years drilling openings and endgames, Dr. Adu Poku came to the game with fresh eyes and a scientific mind - and he made it count.",
       "Defining Moments",
       "Of all his achievements on the board, one memory stands out above the rest: winning the Tema Chess Classics in 2023. The tournament attracted remarkable participants from across West Africa, making his victory all the more significant. It was a moment that proved his place among the region's elite, and one he will never forget.",
-      "Building on that triumph, Dr. Adu Poku went on to claim the Ghana National Chess Title — not once, but three times in a row. That hat-trick of national titles speaks to a consistency and mental fortitude that few players in Ghana's chess history have achieved.",
+      "Building on that triumph, Dr. Adu Poku went on to claim the Ghana National Chess Title - not once, but three times in a row. That hat-trick of national titles speaks to a consistency and mental fortitude that few players in Ghana's chess history have achieved.",
       "Beyond the Board",
       "Away from chess, Dr. Adu Poku serves as a medical doctor, bringing the same precision and calm under pressure that defines his chess game to his medical practice. His dual mastery of medicine and chess speaks to a rare intellectual depth.",
-      "And if that weren't enough, he is also known as a formidable FIFA player — adding yet another dimension to his competitive spirit. Whether it's across a chessboard, on a digital pitch, or in a clinic, Dr. Adu Poku brings his best.",
-      "His journey is a reminder that greatness is not confined to a single arena — and that the game of chess, much like life, rewards those who think deeply, move boldly, and never stop competing."
+      "And if that weren't enough, he is also known as a formidable FIFA player - adding yet another dimension to his competitive spirit. Whether it's across a chessboard, on a digital pitch, or in a clinic, Dr. Adu Poku brings his best.",
+      "His journey is a reminder that greatness is not confined to a single arena - and that the game of chess, much like life, rewards those who think deeply, move boldly, and never stop competing."
     ],
     image: null,
     tags: ["Legend", "National Champion", "Medicine", "Inspiration"]
