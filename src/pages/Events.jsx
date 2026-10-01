@@ -97,61 +97,8 @@ const Events = () => {
       </div>
 
 
-      {/* Blitz Royale Section */}
-      <div className="mb-12 relative overflow-hidden py-8">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[300px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
-        
-        <div className="flex flex-col mb-6 relative z-10">
-          <h2 className="text-sm font-bold tracking-widest uppercase text-chess-accent mb-2">High-Speed Battle</h2>
-          <div className="h-px w-24 bg-gradient-to-r from-chess-accent to-transparent" />
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
-          <div className="flex-1">
-             <h3 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none text-white mb-6">
-               Blitz<br />
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-chess-accent to-white">Royale</span>
-             </h3>
-             <p className="text-xl text-gray-400 font-light max-w-xl">
-               Speed, precision, and nerves of steel. 11 rounds of pure adrenaline where the clock is as much an opponent as the player across the board.
-             </p>
-          </div>
-
-          <div className="w-full lg:w-auto flex flex-col gap-4">
-             <div className="glass-panel p-8 border-l-4 border-chess-accent flex flex-col gap-6">
-                <div className="grid grid-cols-2 gap-8">
-                   <div>
-                      <span className="text-[10px] uppercase tracking-widest text-gray-500 block mb-1">Time Control</span>
-                      <span className="text-2xl font-bold text-white">5 + 0</span>
-                   </div>
-                   <div>
-                      <span className="text-[10px] uppercase tracking-widest text-gray-500 block mb-1">Rounds</span>
-                      <span className="text-2xl font-bold text-white">11 Rounds</span>
-                   </div>
-                   <div>
-                      <span className="text-[10px] uppercase tracking-widest text-gray-500 block mb-1">Entry Fee</span>
-                      <span className="text-2xl font-bold text-white">30 GHS</span>
-                   </div>
-                   <div>
-                      <span className="text-[10px] uppercase tracking-widest text-gray-500 block mb-1">Date</span>
-                      <span className="text-2xl font-bold text-white">08 / 08 / 26</span>
-                   </div>
-                   <div className="col-span-2 border-t border-white/5 pt-4">
-                      <span className="text-[10px] uppercase tracking-widest text-chess-accent font-bold block mb-1">Tournament Rewards</span>
-                      <span className="text-3xl font-black text-white italic tracking-tighter">CASH PRIZES</span>
-                   </div>
-                </div>
-                <div className="h-px bg-white/10" />
-                <div className="text-center">
-                   <span className="text-xs uppercase tracking-[0.4em] font-bold text-chess-accent">Prepare for the Storm</span>
-                </div>
-             </div>
-          </div>
-        </div>
-      </div>
-
       {/* KNUST Online Cup Chess Tournament */}
-      <div className="mb-12 relative overflow-hidden py-8 border-t border-white/5">
+      <div className="mb-12 relative overflow-hidden py-8">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[300px] bg-chess-accent/5 blur-[120px] pointer-events-none" />
 
         <div className="flex flex-col mb-6 relative z-10">
