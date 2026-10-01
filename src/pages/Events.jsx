@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const eventGalleries = {
@@ -67,7 +68,35 @@ const videos = [
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('clubMoments');
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const touchStart = useRef(null);
+  const swiped = useRef(false);
+  const gallery = eventGalleries[activeTab];
+  const selectedImage = selectedIndex === null ? null : gallery[selectedIndex];
+
+  const navigateImage = (direction) => {
+    setSelectedIndex((index) => index === null ? null : (index + direction + gallery.length) % gallery.length);
+  };
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setSelectedIndex(null);
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        const direction = event.key === 'ArrowLeft' ? -1 : 1;
+        setSelectedIndex((index) => index === null ? null : (index + direction + gallery.length) % gallery.length);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedIndex, gallery.length]);
 
   const tabs = [
     { id: 'clubMoments', label: "Club Moments" },
@@ -347,7 +376,7 @@ const Events = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
                 className="relative group cursor-pointer overflow-hidden bg-gray-800 aspect-[4/3] border border-white/10"
-                onClick={() => setSelectedImage(media)}
+                onClick={() => setSelectedIndex(idx)}
               >
                 <img
                   src={media.src}
@@ -383,22 +412,83 @@ const Events = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
-            onClick={() => setSelectedImage(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photo Archive image viewer"
+            style={{ touchAction: 'pan-y pinch-zoom' }}
+            onTouchStart={(event) => {
+              swiped.current = false;
+              touchStart.current = event.touches.length === 1
+                ? { x: event.touches[0].clientX, y: event.touches[0].clientY }
+                : null;
+            }}
+            onTouchCancel={() => { touchStart.current = null; }}
+            onTouchEnd={(event) => {
+              const start = touchStart.current;
+              touchStart.current = null;
+              if (!start || event.touches.length > 0) return;
+              const deltaX = event.changedTouches[0].clientX - start.x;
+              const deltaY = event.changedTouches[0].clientY - start.y;
+              if (Math.abs(deltaX) >= 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                swiped.current = true;
+                navigateImage(deltaX < 0 ? 1 : -1);
+              }
+            }}
+            onClick={() => {
+              if (swiped.current) {
+                swiped.current = false;
+                return;
+              }
+              setSelectedIndex(null);
+            }}
           >
             <button
-              className="absolute top-6 right-6 text-white/50 hover:text-white text-4xl"
-              onClick={() => setSelectedImage(null)}
+              type="button"
+              aria-label="Close image viewer"
+              autoFocus
+              className="absolute top-6 right-6 z-10 border-0 bg-transparent outline-none focus-visible:text-white text-white/50 hover:text-white text-4xl"
+              onClick={(event) => {
+                event.stopPropagation();
+                setSelectedIndex(null);
+              }}
             >
               &times;
             </button>
+            <button
+              type="button"
+              aria-label="Previous image"
+              className="absolute left-2 sm:left-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              onClick={(event) => {
+                event.stopPropagation();
+                navigateImage(-1);
+              }}
+            >
+              <ChevronLeft aria-hidden="true" size={28} />
+            </button>
             <motion.img
+              key={selectedImage.src}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               src={selectedImage.src}
               alt={selectedImage.alt}
-              className="max-w-full max-h-[90vh] object-contain border border-white/20"
+              draggable={false}
+              className="max-w-full max-h-[80dvh] sm:max-w-[calc(100%-8rem)] object-contain border border-white/20 select-none"
               onClick={(e) => e.stopPropagation()}
             />
+            <button
+              type="button"
+              aria-label="Next image"
+              className="absolute right-2 sm:right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              onClick={(event) => {
+                event.stopPropagation();
+                navigateImage(1);
+              }}
+            >
+              <ChevronRight aria-hidden="true" size={28} />
+            </button>
+            <p className="absolute bottom-6 left-0 right-0 text-center text-sm text-white/70 pointer-events-none" aria-live="polite" aria-atomic="true">
+              {selectedIndex + 1} / {gallery.length}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
