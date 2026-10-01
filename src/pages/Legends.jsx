@@ -170,8 +170,9 @@ const legendsData = [
     id: 13,
     name: 'CM Maud Benson',
     title: 'The Continental Champion',
-    description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women’s Chess Champion.',
+    description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women\'s Chess Champion and Chess Olympiad gold medalist.',
     achievements: [
+      "Gold Medal, Chess Olympiad 2026 (Teams Rating Category)",
       "Two-time West African Women's Chess Champion",
       "Represented Ghana on the international stage",
       "Advocate for girls in STEM and chess"

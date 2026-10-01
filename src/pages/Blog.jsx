@@ -23,7 +23,7 @@ const blogPosts = [
     title: "CM Maud Benson's Journey",
     author: "KNUST Chess Club",
     date: "May 2026",
-    summary: "In the world of chess, where precision meets creativity and patience defines greatness, few stories are as inspiring as that of Maud Benson. Her journey, from a curious teenager discovering the game to becoming a two-time West African women’s champion...",
+    summary: "From a curious teenager to a two-time West African Women’s Champion and Chess Olympiad 2026 gold medalist — Maud Benson’s story is one of discipline, passion, and breaking boundaries.",
     content: [
       "In the world of chess, where precision meets creativity and patience defines greatness, few stories are as inspiring as that of Maud Benson. Her journey, from a curious teenager discovering the game to becoming a two-time West African women’s champion, reflects discipline, passion, and a drive to excel beyond boundaries.",
       "Early Foundations",
@@ -32,6 +32,8 @@ const blogPosts = [
       "Rising Through the Ranks",
       "Every chess player has defining moments, and for Maud, one stands above the rest: representing Ghana on the international stage. Wearing national colors and competing globally is not just an achievement, it’s a statement of excellence and national pride.",
       "Her dedication and consistent performance earned her one of the most remarkable accomplishments in her career: becoming a two-time West African Women’s Chess Champion. This achievement places her among the elite players in the region and highlights her as a key figure in African chess.",
+      "Chess Olympiad 2026 — Gold Medal",
+      "In 2026, Maud reached the pinnacle of her international chess career, winning a Gold Medal at the Chess Olympiad in the Teams Rating Category. This historic achievement cements her legacy as one of Ghana’s greatest chess exports and a trailblazer for women in African chess.",
       "Beyond the Chessboard",
       "Maud is not just a chess player she is a multifaceted individual balancing both technical and creative pursuits. Currently, she is undergoing training with the Reliability Engineering team at Cargill Cocoa, where she applies her knowledge from her Mechanical Engineering studies in a real-world industrial setting.",
       "At the same time, she continues to compete in chess and contribute to the chess community through content creation.",
@@ -41,7 +43,7 @@ const blogPosts = [
       "Maud Benson’s story is more than just personal success, it’s a source of inspiration for young people, especially girls in STEM and chess across Africa. She proves that you don’t have to choose between academics, creativity, and passion, you can excel in all."
     ],
     image: "/blogs/Maud_Benson.jpeg",
-    tags: ["Legend", "Inspiration", "Women in Chess"]
+    tags: ["Legend", "Inspiration", "Women in Chess", "Olympiad Gold"]
   },
   {
     id: 3,
@@ -57,6 +59,26 @@ const blogPosts = [
     ],
     image: "/blogs/Micheal.jpeg",
     tags: ["Legend", "Leadership", "Speed Chess"]
+  },
+  {
+    id: 4,
+    title: "Dr. Kwabena Adu Poku's Journey",
+    author: "KNUST Chess Club",
+    date: "October 2026",
+    summary: "Introduced to chess at 15 through a friend's event, Dr. Kwabena Adu Poku went on to win the Tema Chess Classics against West African competitors and claim the Ghana National Chess Title three times in a row — all while practicing medicine.",
+    content: [
+      "Dr. (Med) Kwabena Adu Poku's story is a testament to the idea that chess and professional excellence can go hand in hand. A product of Opoku Ware School where he studied science, Dr. Adu Poku was first introduced to the sport at age 15 — not through a formal training program, but through the simple joy of attending a friend's chess event.",
+      "That casual introduction lit a fire that would fuel decades of competitive chess. Where many great players spend their formative years drilling openings and endgames, Dr. Adu Poku came to the game with fresh eyes and a scientific mind — and he made it count.",
+      "Defining Moments",
+      "Of all his achievements on the board, one memory stands out above the rest: winning the Tema Chess Classics in 2023. The tournament attracted remarkable participants from across West Africa, making his victory all the more significant. It was a moment that proved his place among the region's elite, and one he will never forget.",
+      "Building on that triumph, Dr. Adu Poku went on to claim the Ghana National Chess Title — not once, but three times in a row. That hat-trick of national titles speaks to a consistency and mental fortitude that few players in Ghana's chess history have achieved.",
+      "Beyond the Board",
+      "Away from chess, Dr. Adu Poku serves as a medical doctor, bringing the same precision and calm under pressure that defines his chess game to his medical practice. His dual mastery of medicine and chess speaks to a rare intellectual depth.",
+      "And if that weren't enough, he is also known as a formidable FIFA player — adding yet another dimension to his competitive spirit. Whether it's across a chessboard, on a digital pitch, or in a clinic, Dr. Adu Poku brings his best.",
+      "His journey is a reminder that greatness is not confined to a single arena — and that the game of chess, much like life, rewards those who think deeply, move boldly, and never stop competing."
+    ],
+    image: null,
+    tags: ["Legend", "National Champion", "Medicine", "Inspiration"]
   }
 ];
 
