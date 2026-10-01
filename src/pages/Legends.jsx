@@ -19,7 +19,7 @@ const legendsData = [
   },
   {
     id: 13,
-    name: 'FM Maud Benson',
+    name: 'WFM Maud Benson',
     title: 'The Continental Champion',
     description: 'A multifaceted force balancing engineering and chess, who rose from a curious teenager to a two-time West African Women\'s Chess Champion and Chess Olympiad gold medalist.',
     achievements: [

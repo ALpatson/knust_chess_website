@@ -20,7 +20,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "FM Maud Benson's Journey",
+    title: "WFM Maud Benson's Journey",
     author: "KNUST Chess Club",
     date: "May 2026",
     summary: "From a curious teenager to a two-time West African Women’s Champion and Chess Olympiad 2026 gold medalist - Maud Benson’s story is one of discipline, passion, and breaking boundaries.",
