@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, animate, useMotionValue } from 'framer-motion';
 
 const eventGalleries = {
   clubMoments: [
@@ -69,14 +69,26 @@ const videos = [
 const Events = () => {
   const [activeTab, setActiveTab] = useState('clubMoments');
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const touchStart = useRef(null);
+  const slider = useRef(null);
+  const transitioning = useRef(false);
+  const slideX = useMotionValue(0);
   const swiped = useRef(false);
   const gallery = eventGalleries[activeTab];
   const selectedImage = selectedIndex === null ? null : gallery[selectedIndex];
 
-  const navigateImage = (direction) => {
+  const navigateImage = useCallback(async (direction) => {
+    if (transitioning.current || !slider.current) return;
+    transitioning.current = true;
+    await animate(slideX, -direction * slider.current.clientWidth, {
+      type: 'tween', duration: 0.25, ease: 'easeOut',
+    });
     setSelectedIndex((index) => index === null ? null : (index + direction + gallery.length) % gallery.length);
-  };
+    transitioning.current = false;
+  }, [gallery.length, slideX]);
+
+  useLayoutEffect(() => {
+    slideX.set(0);
+  }, [selectedIndex, slideX]);
 
   useEffect(() => {
     if (selectedIndex === null) return;
@@ -88,7 +100,7 @@ const Events = () => {
       if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
         event.preventDefault();
         const direction = event.key === 'ArrowLeft' ? -1 : 1;
-        setSelectedIndex((index) => index === null ? null : (index + direction + gallery.length) % gallery.length);
+        navigateImage(direction);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -96,7 +108,7 @@ const Events = () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedIndex, gallery.length]);
+  }, [selectedIndex, navigateImage]);
 
   const tabs = [
     { id: 'clubMoments', label: "Club Moments" },
@@ -411,29 +423,12 @@ const Events = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/95 px-4 pt-16 pb-6 gap-4"
             role="dialog"
             aria-modal="true"
             aria-label="Photo Archive image viewer"
             style={{ touchAction: 'pan-y pinch-zoom' }}
-            onTouchStart={(event) => {
-              swiped.current = false;
-              touchStart.current = event.touches.length === 1
-                ? { x: event.touches[0].clientX, y: event.touches[0].clientY }
-                : null;
-            }}
-            onTouchCancel={() => { touchStart.current = null; }}
-            onTouchEnd={(event) => {
-              const start = touchStart.current;
-              touchStart.current = null;
-              if (!start || event.touches.length > 0) return;
-              const deltaX = event.changedTouches[0].clientX - start.x;
-              const deltaY = event.changedTouches[0].clientY - start.y;
-              if (Math.abs(deltaX) >= 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
-                swiped.current = true;
-                navigateImage(deltaX < 0 ? 1 : -1);
-              }
-            }}
+            onPointerDown={() => { swiped.current = false; }}
             onClick={() => {
               if (swiped.current) {
                 swiped.current = false;
@@ -454,41 +449,69 @@ const Events = () => {
             >
               &times;
             </button>
-            <button
-              type="button"
-              aria-label="Previous image"
-              className="absolute left-2 sm:left-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-              onClick={(event) => {
-                event.stopPropagation();
-                navigateImage(-1);
-              }}
+            <div
+              ref={slider}
+              className="relative w-full h-[calc(100dvh-12rem)] sm:w-[calc(100%-8rem)] sm:h-[80dvh] overflow-hidden"
+              onClick={(event) => event.stopPropagation()}
             >
-              <ChevronLeft aria-hidden="true" size={28} />
-            </button>
-            <motion.img
-              key={selectedImage.src}
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              draggable={false}
-              className="max-w-full max-h-[80dvh] sm:max-w-[calc(100%-8rem)] object-contain border border-white/20 select-none"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button
-              type="button"
-              aria-label="Next image"
-              className="absolute right-2 sm:right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-              onClick={(event) => {
-                event.stopPropagation();
-                navigateImage(1);
-              }}
-            >
-              <ChevronRight aria-hidden="true" size={28} />
-            </button>
-            <p className="absolute bottom-6 left-0 right-0 text-center text-sm text-white/70 pointer-events-none" aria-live="polite" aria-atomic="true">
-              {selectedIndex + 1} / {gallery.length}
-            </p>
+              <motion.div
+                className="relative h-full w-full"
+                style={{ x: slideX, touchAction: 'pan-y pinch-zoom' }}
+                drag="x"
+                dragMomentum={false}
+                onDragStart={() => { swiped.current = true; }}
+                onDragEnd={(_, info) => {
+                  if (transitioning.current) return;
+                  const threshold = Math.min(100, slider.current.clientWidth * 0.2);
+                  if (Math.abs(info.offset.x) > threshold || Math.abs(info.velocity.x) > 500) {
+                    const direction = Math.abs(info.offset.x) > threshold ? info.offset.x : info.velocity.x;
+                    navigateImage(direction < 0 ? 1 : -1);
+                  } else {
+                    animate(slideX, 0, { type: 'spring', stiffness: 300, damping: 30 });
+                  }
+                }}
+              >
+                {[-1, 0, 1].map((offset) => {
+                  const image = gallery[(selectedIndex + offset + gallery.length) % gallery.length];
+                  return (
+                    <div
+                      key={offset}
+                      className="absolute inset-0 flex items-center justify-center"
+                      style={{ left: `${offset * 100}%`, right: `${-offset * 100}%` }}
+                      aria-hidden={offset !== 0}
+                    >
+                      <img
+                        src={image.src}
+                        alt={offset === 0 ? image.alt : ''}
+                        draggable={false}
+                        className="max-w-full max-h-full object-contain border border-white/20 select-none pointer-events-none"
+                      />
+                    </div>
+                  );
+                })}
+              </motion.div>
+            </div>
+            <div className="flex items-center justify-center gap-6" onClick={(event) => event.stopPropagation()}>
+              <button
+                type="button"
+                aria-label="Previous image"
+                className="sm:absolute sm:left-6 sm:top-1/2 sm:-translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                onClick={() => navigateImage(-1)}
+              >
+                <ChevronLeft aria-hidden="true" size={28} />
+              </button>
+              <p className="min-w-16 text-center text-sm text-white/70 pointer-events-none" aria-live="polite" aria-atomic="true">
+                {selectedIndex + 1} / {gallery.length}
+              </p>
+              <button
+                type="button"
+                aria-label="Next image"
+                className="sm:absolute sm:right-6 sm:top-1/2 sm:-translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 border border-white/30 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                onClick={() => navigateImage(1)}
+              >
+                <ChevronRight aria-hidden="true" size={28} />
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
